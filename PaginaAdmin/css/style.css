@@ -37,7 +37,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),  url('../images/admin_foto.jpg');
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),  url('../images/imagen_presentacion.jpeg');
     background-size: cover; /*Para que se adapte a la pagina*/
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 99%, 0 80%);
     z-index: -1;
@@ -45,20 +45,27 @@ body{
 }   
 
 /*seccion de navegacion*/
+.nav__contenedor{
+    max-width: auto;
+    margin: 0 auto;
+}
 .nav{
-    --padding-container: 0;
-    height: 100%;
+    height: 75%;
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
-
+    background-color: rgba(75, 5, 5, 0.85);
 }
 
 .nav__titulo{
     font-weight: 300; /*delgada fuente*/
+    padding-left: 60px;
 }
 
 .nav__viñetas{
     list-style: none;
+    padding-right: 30px;
 
 }
 
@@ -76,6 +83,12 @@ body{
     gap: 2em;
 }
 
+.nav__iconos{
+    width: 20px;
+    margin-right: 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
 .nav__img{
     display: block;
     width: 30px;
@@ -92,6 +105,7 @@ body{
 
 /*Modificar la parte de HERO, descripcion aula*/
 .hero__contenedor{
+    padding-top: 50px;
     max-width: 800px;
     --padding-container: 0;
     display: grid;
@@ -293,6 +307,7 @@ body{
     grid-row: 1/2; /*Hacer que ocupe la primera fila*/
     opacity: 0;
     pointer-events: none; /*Para que no se pueda interactuar con el elemento*/
+    padding-left: 60px;
 
 }
 
@@ -308,6 +323,7 @@ body{
     border-radius:  50%;
     object-fit: cover; /*Para que la imagen no se deforme*/
     object-position: 50% 30%; /*Para centrar la imagen*/
+    margin-right: 50px;
 }
 
 .descripcion__text{
@@ -337,7 +353,7 @@ body{
     display: grid;
     gap: 2em;
     padding-top:50px;
-    padding-bottom: 100px;
+    padding-bottom: 4px;
 }
 
 
@@ -396,3 +412,93 @@ body{
     transition: height 0.3s;
 }
 
+
+/*Footer*/
+.footer {
+  background-color: #460606;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  padding: 50px 50px 20px;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+
+.footer__logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.facultad {
+  display: block;
+  color: #ffffff;
+}
+
+.ingenieria {
+  display: block;
+  color: #e53935;
+}
+
+
+.footer__info {
+  max-width: 500px;
+  font-size: 15px;
+}
+
+.footer__info h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+
+.footer__links h4 {
+  margin-bottom: 10px;
+}
+
+.footer__links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__links li {
+  margin-bottom: 8px;
+}
+
+.footer__links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  text-decoration: underline;
+}
+
+.footer hr {
+  margin: 30px 0 20px;
+  border: 0;
+  height: 1px;
+  background-color: #edddde;
+}
+
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer__social a {
+  color: #ffffff;
+  margin-left: 15px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer__social a:hover {
+  opacity: 0.7;
+}
