@@ -3,7 +3,7 @@
 /* PRIPIEDADES*/
 :root{
     --padding-container: 100px 0;
-    --color-title: #460606;
+    --color-title: rgb(155, 0, 0);
 }
 
 /*Formato de la pagina*/
@@ -55,7 +55,7 @@ body{
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: rgba(75, 5, 5, 0.85);
+    background-color: rgba(246, 1, 1, 0.80);
 }
 
 .nav__titulo{
@@ -84,8 +84,8 @@ body{
 }
 
 .nav__iconos{
-    width: 20px;
-    margin-right: 2px;
+    width: 18px;
+    margin-right: 5px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -128,7 +128,7 @@ body{
     display: inline-block;
     justify-self: center;
     color: aliceblue;
-    background-color: #460606;
+    background-color: rgba(246, 1, 1);
     text-decoration: none;
     padding: 13px 20px;
     border-radius: 30px;
@@ -150,7 +150,9 @@ body{
 
 .acercaDe__parrafo{
     line-height: 2.5;
-    
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 /*Para que se pongan uno al lado de otro*/
@@ -176,10 +178,66 @@ body{
 .acercaDe__icono{
     width: 40px;
 }
+.acercade__Tabla{
+    padding-top: 60px;
+    display: flex; /*Uno detras de otro*/
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly; /*Espacio igual entre los elementos*/
+    align-items: center;
+}
+
+.acercade__elemento {
+    /* Fondo blanco grisáceo */
+    background-color: #f5f5f5; 
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+    
+    /* Borde inicial sutil o transparente para que no "salte" al activarse */
+    border: 3px solid transparent;
+    
+    /* Control de tamaño: 
+       Intentará medir 45% para que quepan dos por fila (dejando espacio para el gap).
+       El min-width asegura que en celulares se estire al 100% */
+    flex: 1 1 400px; 
+    max-width: 500px;
+    
+    /* Transición suave para el color */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto Hover (cuando pasas el ratón) */
+.acercade__elemento:hover {
+    background-color: #f60101; /* Rojo */
+    border-color: #f60101;
+}
+
+/* Cambiar el color del texto a blanco cuando el fondo sea rojo para que sea legible */
+.acercade__elemento:hover .acercaDe__titulo,
+.acercade__elemento:hover .acercaDe__parrafo {
+    color: white;
+}
+
+/* Ajuste de imágenes */
+.acercaDe__icono {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.grid-2x2 {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que los elementos bajen si no caben */
+    gap: 30px;            /* Espacio entre los recuadros */
+    justify-content: center;
+    padding: 20px;
+}
+
 
 /*Seccion con fondo (info adicional)*/
 .seccionFondo{
-    background-color: #460606;
+    background-color: rgba(246, 1, 1);
     /*background-image: radial-gradient(circle at center center, #f4f4f4, #460606), repeating-radial-gradient(circle at center center, #f4f4f4, #f4f4f4, 4px, transparent 8px, transparent 4px);*/
     background-blend-mode: multiply;
     overflow: hidden;
@@ -233,7 +291,7 @@ body{
 }
 
 .servicio__elemento{
-    background-color: #b56969;
+    background-color: rgba(246, 1, 1, 0.7);
     text-align: center;
     border-radius: 10px ;
     width: 300px;
@@ -263,7 +321,7 @@ body{
 }
 
 .individualS__boton{
-    background-color: #460606;
+    background-color: (246, 1, 1);
     display: block;
     padding: 20px 0;
     border-radius: 10px;
@@ -274,7 +332,7 @@ body{
 }
 
 .servicio__elemento--mejor{
-    background-color: #720f0f;
+    background-color: rgba(246, 1, 1);
     padding: 50px 40px;
     text-align: center;
     border-radius: 10px ;
@@ -284,7 +342,7 @@ body{
 
 /*Seccion Personas a cargo*/
 .descripcion{
-    background-color: #b56969;
+    background-color: rgba(246, 1, 1);
 }
 
 .contenedor__descripcion{
@@ -337,7 +395,7 @@ body{
 
 
 .descripcion__cargo{
-    background-color: #720f0f;
+    background-color: rgba(246, 1, 1);
     color: aliceblue;
     display: inline-block;
     padding:5px;
@@ -360,7 +418,7 @@ body{
 .padding__preguntasF{ /*Arraglamos padding*/
     padding: 0;
     transition:padding 0.3s ;
-    border: 1px solid #720f0f;
+    border: 1px solid (246, 1, 1);
     border-radius: 6px;
 }
 
@@ -378,7 +436,7 @@ body{
     font-size: 20px;
     padding: 30px 0  30px;
     cursor: pointer;
-    color: #460606;
+    color: (246, 1, 1);
     justify-content: space-between; /*Para que se separen los elementos*/
 
 }
@@ -415,7 +473,7 @@ body{
 
 /*Footer*/
 .footer {
-  background-color: #460606;
+  background-color: rgba(246, 1, 1);
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   padding: 50px 50px 20px;
