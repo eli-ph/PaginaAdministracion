@@ -84,8 +84,8 @@ body{
 }
 
 .nav__iconos{
-    width: 20px;
-    margin-right: 2px;
+    width: 30px;
+    margin-right: 15px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -124,7 +124,7 @@ body{
     margin-bottom:20px;
 }
 
-.cta{
+.boton{
     display: inline-block;
     justify-self: center;
     color: aliceblue;
@@ -149,8 +149,7 @@ body{
 }
 
 .acercaDe__parrafo{
-    line-height: 2.5;
-    
+    line-height: 2.5;    
 }
 
 /*Para que se pongan uno al lado de otro*/
@@ -281,6 +280,46 @@ body{
     width: 330px;
   
 }
+
+/*Seccion servicio 2*/
+.servicioscocial{
+    background-color: #ffffff;
+    /*background-image: radial-gradient(circle at center center, #f4f4f4, #460606), repeating-radial-gradient(circle at center center, #f4f4f4, #f4f4f4, 4px, transparent 8px, transparent 4px);*/
+    background-blend-mode: multiply;
+    overflow: hidden;
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+
+.seccionFondo__contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.seccionFondo__figura{
+    max-width: 500px;
+}
+
+.seccionFondo__img{
+    width: 100%;
+    display: block; /*evitar roblemas con espacios verticales*/
+
+}
+
+.subtituloAcercaDe{
+    color:rgb(74, 0, 0);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.seccionFondo__parrafo{
+    color: rgb(0, 0, 0);
+    line-height: 1.7; 
+}
+
 
 /*Seccion Personas a cargo*/
 .descripcion{
