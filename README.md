@@ -3,7 +3,7 @@
 
 ## Descripción
 
-Página web de administración de cómputo del Departamento de Computación, desarrollada con tecnologías web vanilla.
+Página web para el Departamento de Computación en el area de Administración, desarrollada con tecnologías web vanilla.
 
 ### Tecnologías
 
@@ -29,7 +29,5 @@ cd PaginaAdministracion
 Abre `index.html` en tu navegador web.
 
 ### Licencia
-
-Especifica la licencia del proyecto.
-
+Este proyecto está bajo la Licencia Pública General de GNU v3.0 (GPL-3.0), alineado con las iniciativas de Software Libre de la Universidad Nacional Autónoma de México (UNAM).
 
