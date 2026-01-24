@@ -462,7 +462,7 @@ body{
 }
 
 
-.skills-section {
+.servicioSocial__Habilidades {
   max-width: 900px;
   margin: 70px auto;
   display: grid;
@@ -470,7 +470,7 @@ body{
   gap: 30px;
 }
 
-.skills-card {
+.habilidades__bloque {
   background: #fafafa;
   border-radius: 18px;
   padding: 28px 30px;
@@ -478,19 +478,19 @@ body{
   
 }
 
-.skills-card h3 {
+.habilidades__bloque h3 {
   margin-bottom: 18px;
   font-size: 22px;
   color: #b30000;
 }
 
-.skills-card ul {
+.habilidades__bloque ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.skills-card li {
+.habilidades__bloque li {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -500,11 +500,11 @@ body{
   text-align: justify;
 }
 
-.skills-card li:last-child {
+.habilidades__bloque li:last-child {
   border-bottom: none;
 }
 
-.skills-card:hover{
+.habilidades__bloque:hover{
     box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
