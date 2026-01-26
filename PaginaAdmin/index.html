@@ -129,23 +129,79 @@
         </section>
         
         <!-- Servicio socail -->
-         <section class="servicioscocial">
-            <dib class="servicioSocial__contenedor contenedor">
-                <div class="servicioSocial__texto">
-                    <h2 class="subtituloAcercaDe"> Info relevante </h2>
-                    <p class="seccionFondo__parrafo">La Administración de Cómputo del Departamento de Computación contribuye directamente 
-                        al desarrollo de las actividades de docencia al asegurar el correcto funcionamiento de los
-                        laboratorios de cómputo del Departamento. Asimismo, funge como un espacio de
-                        aprendizaje práctico para el personal del laboratorio y el personal de servicio social,
-                        fomentando así la investigación y el desarrollo de habilidades técnicas y profesionales en un
-                        entorno productivo.
+        <section class="servicio__social contenedor">
+            <h2 class="subtitulo">Servicio social</h2>
+            <h2 class="subsubtitulo">Administración de Cómputo</h2>
 
-                    </p>
+            <p class="servicioSocial__objetivo">
+                Objetivo: Brindar apoyo al personal académico, administrativo y estudiantil en el 
+                mantenimiento preventivo y correctivo a equipo de cómputo. Apoyar en la revisión e
+                implementación de redes de datos del área. Apoyar en el desarrollo de software y proyectos
+                del área. Brindar asesoría académica y técnica en áreas de cómputo a la comunidad
+                universitaria.
+            </p>
+
+            <div class="service-list">
+                <div> <img src="./images/iconos/icono_persona.svg" class="serviciosocial__iconos" alt="icono"><strong>Modalidad:</strong> Presencial</div>
+                <div><img src="./images/iconos/icono_reloj.svg" class="serviciosocial__iconos" alt="icono"><strong>Turno:</strong> Flexible / Mixto</div>
+                <div><img src="./images/iconos/icono_calendario.svg" class="serviciosocial__iconos" alt="icono"><strong>Horario:</strong> Lunes a viernes de 7 a 21 horas. Sábado de 9 a 14 horas</div>
+                <div><img src="./images/iconos/icono_ubicacion.svg" class="serviciosocial__iconos" alt="icono"><strong>Ubicación:</strong> Facultad de ingenieria, segundo piso del edificio Q.</div>
+            </div>
+
+
+
+
+            <h3 class="subsubtitulo">Carreras solicitadas</h3>
+
+            <div class="servicioSocial__carreras">
+                <button class="boton__carreras" data-info="electrica_comunicaciones">Ingeniería eléctrica electrónica (FI) e ingeniería en telecomunicaciones (FI)</button>
+                <button class="boton__carreras" data-info="compu">Ingeniería en computación (FI)</button>
+                <button class="boton__carreras" data-info="industrial">Ingeniería industrial (FI)</button>
+                <button class="boton__carreras" data-info="mecatronica">Ingeniería mecatrónica (FI)</button>
+                <button class="boton__carreras" data-info="datos">Ciencia de datos (IIMAS)</button>
+                <button class="boton__carreras" data-info="info">Informática (FCA)</button>
+                <button class="boton__carreras" data-info="tec_compu">Tec. Esp. en Computación (ENP)</button>
+                <button class="boton__carreras" data-info="tec_desarrollo">Tec. Esp. en Sist. Comput. Desarrollo software (CCH)</button>
+                <button class="boton__carreras" data-info="tec_web">Tec. Esp. Sist. Comput. Diseño Aplicación Web BD (CCH)</button>
+            </div>
+
+            <!-- Botones carreras -->
+            <div class="info__despegable" id="info__despegable">
+            <div class="infodespegable__caja">
+                <button class="infodespegable__close">×</button>
+
+                <h4 id="infodespegable__titulo"></h4>
+                <ul id="infodespegable__list"></ul>
+            </div>
+            </div>
+
+            <!-- Habilidades -->
+            <div class="servicioSocial__Habilidades">
+                <div class="habilidades__bloque">
+                    <h3>Habilidades requeridas</h3>
+                    <ul>
+                        <li>Interés en soporte técnico y TI</li>
+                        <li>Actitud de servicio y responsabilidad</li>
+                        <li>Capacidad de trabajo en equipo</li>
+                    </ul>
                 </div>
-                <figure class="seccionFondo__figura">
-                    <img class="seccionFondo__img" src="./images/admin_vista.jpg" alt="">
-                </figure>
-            </dib>
+
+                <div class="habilidades__bloque">
+                    <h3>Habilidades a desarrollar</h3>
+                    <ul>
+                        <li>Diagnóstico y solución de problemas técnicos</li>
+                        <li>Atención y comunicación con usuarios</li>
+                        <li>Organización y documentación de procesos</li>
+                        <li>Experiencia práctica en entornos reales de TI</li>
+                        <li>Comunicación y trabajo en equipo</li>
+                        <li>Conocimiento en infraestructura de red</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            
+
         </section>
 
         <!-- Seccion personas que trabajan -->
@@ -302,5 +358,6 @@
     <!-- Referenciando archivos JS -->
     <script src="./js/carruselCargos.js"></script>
     <script src="./js/preguntas.js"></script>
+    <script src="./js/servicioSocial.js"></script>
 </body>
 </html>
