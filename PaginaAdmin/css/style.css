@@ -123,8 +123,8 @@ body{
 }
 
 .hero__parrafo{
-    margin-bottom: 20px;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 40px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: 1.4;
 }
 
@@ -370,6 +370,7 @@ body{
   padding: 50px;
   text-align: center;
   padding-top: 5px;
+  margin-bottom: 0px;
 }
 .subsubtitulo{
   font-size: 2rem;
@@ -531,7 +532,9 @@ body{
 
 /*Seccion Personas a cargo*/
 .descripcion{
-    background-color: rgba(246, 1, 1);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #db0000, #ff1a1a);
 }
 
 .contenedor__descripcion{
@@ -570,20 +573,21 @@ body{
 }
 
 .descripcion__cuerpo--shadow{
-    pointer-events: unset; 
+    pointer-events: unset;
     opacity: 1;
-    transition: opacity 1.5s ease-in-out;
+    transform: translateY(0);
 }
 
 .descripcion__img{
-    width: 250px;
+    width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
     object-position: 50% 30%;
-    margin-right: 50px;
-}
 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    margin-right: 90px;
+}
 @media (max-width: 768px) {
     .descripcion__img{
         width: 150px;
@@ -592,8 +596,14 @@ body{
     }
 }
 
+
+.nombre__persona{
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 10px; 
+}
 .descripcion__texto{
-    max-width: 700px;
+    max-width: 500px;
 }
 
 @media (max-width: 768px) {
@@ -602,16 +612,34 @@ body{
     }
 }
 
+
 .descripcion__flecha{
     width: 90%;
-    cursor:pointer;
+    cursor: pointer;
+    transition: transform 0.3s;
+    
+}
+
+.descripcion__flecha:hover{
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 .descripcion__cargo{
-    background-color: rgba(246, 1, 1);
-    color: aliceblue;
+    background-color: aliceblue;
+    color: rgba(246, 1, 1);
     display: inline-block;
-    padding:5px;
+    padding:6px;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.descropcion{
+    margin-top: 20px;
+    font-size: 16px;
+    color: #e4e4e4;
+    line-height: 1.8;
+    padding-left: 30px;
 }
 
 /*Seccion preguntas frecuentes*/
@@ -625,6 +653,9 @@ body{
     gap: 2em;
     padding-top:50px;
     padding-bottom: 4px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 5px;
 }
 
 
@@ -633,6 +664,12 @@ body{
     transition:padding 0.3s ;
     border: 1px solid (246, 1, 1);
     border-radius: 6px;
+    background: #fafafa;
+    padding: 14px 20px;
+    border-left: 6px solid rgba(246, 1, 1);
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .padding__preguntasF--add{
@@ -656,7 +693,7 @@ body{
 
 .flecha__pregunta{
     border-radius: 50%;
-    background-color: #ffc1c1;
+    background-color: #eaeaea;
     width: 25px;
     height: 25px;
     display: flex;
@@ -669,6 +706,9 @@ body{
 
 .flecha__pregunta--rotate{
     transform:rotate(180deg);
+}
+.flecha__pregunta:hover{
+    background-color: #dedede;
 }
 
 .imagenes__preguntasF{
