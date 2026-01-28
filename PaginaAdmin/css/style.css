@@ -162,7 +162,6 @@ body{
     margin-bottom: 30px;
 }
 
-/*Para que se pongan uno al lado de otro*/
 .acercaDe__main{
     padding-top: 50px;
     display: grid;
@@ -170,60 +169,50 @@ body{
     margin: 0 auto;
     gap: 1em;
     overflow: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(260px,auto)); /*cree las columnas*/
+    grid-template-columns: repeat(auto-fit, minmax(400px,auto)); /*cree las columnas*/
     padding-bottom: 30px;
 }
 .acercaDe__cajas{
     display:grid;
     gap:1em;
     justify-items: center;    
-    width: 260px;
-    overflow: hidden; /*lo que salga de ese elemento se oculta */
+    width: 400px;
     margin: auto;
 }
 
 .acercaDe__icono{
     width: 30px;
 }
-.acercade__Tabla{
-    padding-top: 60px;
-    display: flex; /*Uno detras de otro*/
-    flex-wrap: wrap;
-    gap: 2.5em;
-    justify-content: space-evenly; /*Espacio igual entre los elementos*/
-    align-items: center;
-}
 
+.acercaDe-list{
+    background: #fafafa;
+    padding: 14px 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1; /* Asegura que todos los elementos tengan el mismo tamaño */
+}
 .acercade__elemento {
-    /* Fondo blanco grisáceo */
     background-color: #ebe6e6bc; 
     text-align: center;
     border-radius: 20px;
-    padding: 30px;
-    
-    /* Borde inicial sutil o transparente para que no "salte" al activarse */
+    font-size: .7rem;
+    padding: 20px;
+    height: flexible;
     border: 3px solid transparent;
-    
-    /* Control de tamaño: 
-       Intentará medir 45% para que quepan dos por fila (dejando espacio para el gap).
-       El min-width asegura que en celulares se estire al 100% */
     flex: 1 1 400px; 
-    max-width: 500px;
-    
-    /* Transición suave para el color */
+    max-width: 400px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
-
-    border-color: #ac0300;
+    border-color: #ffffff;
 }
 
-/* Efecto Hover (cuando pasas el ratón) */
 .acercade__elemento:hover {
-    background-color: #f60101; /* Rojo */
+    background-color: #f60101; 
     border-color: #f60101;
 }
 
-/* Cambiar el color del texto a blanco cuando el fondo sea rojo para que sea legible */
 .acercade__elemento:hover .acercaDe__titulo,
 .acercade__elemento:hover .acercaDe__parrafo {
     color: white;
@@ -231,18 +220,16 @@ body{
 
 /* Ajuste de imágenes */
 .acercaDe__icono {
-    width: 60px;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 50px;
     margin-bottom: 15px;
+    transition: filter 0.3s ease;
 }
 
-.grid-2x2 {
-    display: flex;
-    flex-wrap: wrap;       /* Permite que los elementos bajen si no caben */
-    gap: 30px;            /* Espacio entre los recuadros */
-    justify-content: center;
-    padding: 20px;
+.acercade__elemento:hover .acercaDe__icono {
+    filter: brightness(0) invert(1);
 }
-
 
 /*Seccion con fondo (info adicional)*/
 .seccionFondo{
@@ -261,9 +248,7 @@ body{
     padding: 50px 0;
     margin-top: 30px;
     margin-bottom: 30px;
-
 }
-
 
 .seccionFondo__contenedor{
     display: grid;
