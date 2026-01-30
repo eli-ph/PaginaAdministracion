@@ -211,6 +211,17 @@ html{
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }
 
+.acercade__elemento{
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.acercade__elemento:hover{
+  transform: scale(1.05) translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+
 .acercaDe__icono{
   width: 48px;
   margin-bottom: 15px;
@@ -289,6 +300,19 @@ html{
   background: #ce0101;
   border-radius: 0 24px 24px 0; 
 }
+.info__contenedor{
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.info__contenedor:hover{
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+.info__contenedor:hover .subtitulo{
+  color: rgb(224, 21, 21);
+  transition: color .3s ease;
+}
+
 
 
 .info__texto p{
@@ -855,3 +879,20 @@ grid-row: 1 / 2;
 .footer__social a:hover {
   opacity: 0.7;
 }
+
+
+.interactivo{
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.interactivo:hover{
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  
+}
+.interactivo:hover .subtitulo{
+  color: rgb(200, 0, 0);
+  transition: color .3s ease;
+}
+
