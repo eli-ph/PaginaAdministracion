@@ -156,7 +156,7 @@ html{
 
 .acercaDe{
     text-align: center;
-    margin: 30px;
+    padding-bottom: 30px;
 }
 
 .subtitulo{
@@ -174,80 +174,87 @@ html{
     margin: 0 auto;
     margin-bottom: 30px;
 }
-
 .acercaDe__main{
     padding-top: 50px;
     display: grid;
-    width: 90%;
+    width: 70%; 
     margin: 0 auto;
     gap: 1em;
     overflow: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(400px,auto)); /*cree las columnas*/
+    grid-template-columns: repeat(auto-fit, minmax(400px,auto)); 
     padding-bottom: 30px;
 }
-.acercaDe__cajas{
-    display:grid;
-    gap:1em;
-    justify-items: center;    
-    width: 400px;
-    margin: auto;
+
+.acercade__elemento{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  border-radius: 18px;
+  background: #fafafa;
+  padding: 14px 20px;
+  border-left: 6px solid rgba(246, 1, 1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+  width: 80%;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+
+.acercaDe__elemento:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }
 
 .acercaDe__icono{
-    width: 30px;
+  width: 48px;
+  margin-bottom: 15px;
+}
+
+.acercaDe__titulo{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .acercaDe-list{
-    background: #fafafa;
-    padding: 14px 20px;
-    border-radius: 10px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex: 1; /* Asegura que todos los elementos tengan el mismo tamaño */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+  padding-top: 40px;
 }
-.acercade__elemento {
-    background-color: #ebe6e6bc; 
-    text-align: center;
-    border-radius: 20px;
-    font-size: .7rem;
-    padding: 20px;
-    height: flexible;
-    border: 3px solid transparent;
-    flex: 1 1 400px; 
-    max-width: 400px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    border-color: #ffffff;
+.acercaDe-list {
+  max-width: 90%;
+  margin: 30px auto 20px;
+  display: grid;
+  gap: 10px;
+  text-align: left;
 }
 
-.acercade__elemento:hover {
-    background-color: #f60101; 
-    border-color: #f60101;
+@media (max-width: 1024px){
+  .acercaDe-list{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.acercade__elemento:hover .acercaDe__titulo,
-.acercade__elemento:hover .acercaDe__parrafo {
-    color: white;
+@media (max-width: 600px){
+  .acercaDe-list{
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Ajuste de imágenes */
-.acercaDe__icono {
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    width: 50px;
-    margin-bottom: 15px;
-    transition: filter 0.3s ease;
-}
 
-.acercade__elemento:hover .acercaDe__icono {
-    filter: brightness(0) invert(1);
-}
-
-/*Seccion con fondo (info adicional)*/
 
 .info{ 
     background: #ffffff; padding: 80px 0; 
+    margin-top: 10px;
+    padding-top: 40px;
 }
 .info__contenedor{ 
     max-width: 1100px; 
@@ -469,12 +476,14 @@ grid-row: 1 / 2;
 .infodespegable__caja {
   position: relative; 
   background: #ffffff;
-  padding: 40px 30px 30px;
+  padding: 20px 30px 30px;
   border-radius: 24px;
   width: 90%;
   max-width: 450px;
   animation: pop .35s ease;
-  text-align: justify;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  line-height: 1.5;
 }
 
 @keyframes pop {
