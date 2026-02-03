@@ -864,21 +864,33 @@ grid-row: 1 / 2;
 }
 
 .footer__social a {
-  color: #ffffff;
+  color: #ff0000;
   margin-left: 15px;
   font-size: 18px;
   text-decoration: none;
 }
 
 .footer_social--img {
-  width: 18px;
+  width: 20px;
   margin-right: 5px;
   display: inline-block;
   vertical-align: middle;
 }
-.footer__social a:hover {
-  opacity: 0.7;
+
+.footer_social_X {
+  width: 10px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  color : #ff0000;
 }
+
+
+.footer__social a:hover {
+  opacity: 0.6;
+  color: #ff0000;
+}
+
 
 
 .interactivo{
