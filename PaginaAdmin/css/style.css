@@ -184,7 +184,7 @@ html{
   padding-bottom: 30px;
 }
 
-.acercaDe__elemento{
+.acercade__elemento{
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -205,12 +205,12 @@ html{
 }
 
 
-.acercaDe__elemento:hover{
+.acercade__elemento:hover{
   transform: scale(1.05) translateY(-6px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.18);
 }
 
-.acercaDe__elemento{
+.acercade__elemento{
   cursor: pointer;
   transition: transform .25s ease, box-shadow .25s ease;
 }
@@ -227,7 +227,7 @@ html{
   color: #333;
 }
 
-.acercaDe__list{
+.acercaDe-list{
   max-width: 90%;
   margin: 30px auto 20px;
   display: grid;
@@ -236,22 +236,22 @@ html{
   text-align: left;
   padding-top: 40px;
 }
-.acercaDe__list {
+.acercaDe-list {
   max-width: 90%;
   margin: 30px auto 20px;
   display: grid;
-  gap: 30px;
+  gap: 10px;
   text-align: left;
 }
 
 @media (max-width: 1024px){
-  .acercaDe__list{
+  .acercaDe-list{
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px){
-  .acercaDe__list{
+  .acercaDe-list{
     grid-template-columns: 1fr;
   }
 }
