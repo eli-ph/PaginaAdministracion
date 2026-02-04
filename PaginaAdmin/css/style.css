@@ -153,6 +153,7 @@ html{
 
 
 /* Seccion Acerca De */
+/* Seccion Acerca De */
 
 .acercaDe{
     text-align: center;
@@ -166,22 +167,23 @@ html{
 }
 
 .acercaDe__parrafo{
-  line-height: 2.5;    
-  line-height: 2.5;
-  padding-top: 10px;
-  line-height: 2;
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 30px;
+    line-height: 2.5;    
+    line-height: 2.5;
+    padding-top: 10px;
+    line-height: 2;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 .acercaDe__main{
-  padding-top: 50px;
-  display: grid;
-  width: 70%;
-  margin: 0 auto;
-  gap: 1em;
-  overflow: hidden;
-  padding-bottom: 30px;
+    padding-top: 50px;
+    display: grid;
+    width: 70%; 
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(400px,auto)); 
+    padding-bottom: 30px;
 }
 
 .acercade__elemento{
@@ -205,16 +207,10 @@ html{
 }
 
 
-.acercade__elemento:hover{
-  transform: scale(1.05) translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+.acercaDe__elemento:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }
-
-.acercade__elemento{
-  cursor: pointer;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
 
 .acercaDe__icono{
   width: 48px;
@@ -228,12 +224,10 @@ html{
 }
 
 .acercaDe-list{
-  max-width: 90%;
-  margin: 30px auto 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  text-align: left;
+  gap: 24px;
+  margin-top: 60px;
   padding-top: 40px;
 }
 .acercaDe-list {
@@ -255,8 +249,6 @@ html{
     grid-template-columns: 1fr;
   }
 }
-
-
 
 .info{ 
     background: #ffffff; padding: 80px 0; 
