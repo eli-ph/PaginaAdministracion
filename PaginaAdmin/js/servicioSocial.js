@@ -1,8 +1,8 @@
 const acercaCards = document.querySelectorAll(".acercade__elemento");
-const modal = document.getElementById("info__despegable");
-const titulo = document.getElementById("infodespegable__titulo");
-const lista = document.getElementById("infodespegable__list");
-const cerrar = document.querySelector(".infodespegable__close");
+const modal = document.getElementById("servicioSocial__infoDespegable");
+const titulo = document.getElementById("servicioSocial__infoDespegableTitulo");
+const lista = document.getElementById("servicioSocial__lista");
+const cerrar = document.querySelector(".servicioSocial__infoDespegableClose");
 
 const infoAcerca = {
   soporte: {
@@ -109,11 +109,11 @@ modal.addEventListener("click", e => {
   document.querySelectorAll(".boton__carreras").forEach(boton__carreras => {
     boton__carreras.addEventListener("click", () => {
       const key = boton__carreras.dataset.info;
-      const info__despegable = document.getElementById("info__despegable");
+      const info__despegable = document.getElementById("servicioSocial__infoDespegable");
       
 
-      document.getElementById("infodespegable__titulo").textContent = data[key].title;
-      const list = document.getElementById("infodespegable__list");
+      document.getElementById("servicioSocial__infoDespegableTitulo").textContent = data[key].title;
+      const list = document.getElementById("servicioSocial__lista");
       list.innerHTML = "";
       data[key].items.forEach(i => {
         const li = document.createElement("li");
@@ -125,8 +125,8 @@ modal.addEventListener("click", e => {
     });
   });
 
-  document.querySelector(".infodespegable__close").addEventListener("click", () => {
-    document.getElementById("info__despegable").style.display = "none";
+  document.querySelector(".servicioSocial__infoDespegableClose").addEventListener("click", () => {
+    document.getElementById("servicioSocial__infoDespegable").style.display = "none";
   });
 })();
 

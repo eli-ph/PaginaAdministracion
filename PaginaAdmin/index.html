@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administracion</title>
-    <link rel="shortcut icon" href="./images/iconoPNG.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/iconos/iconoPNG.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/normalize.css">
 </head>
@@ -63,25 +63,25 @@
             apoya en diversas áreas del cómputo a alumnos y al personal adscrito al Departamento.
         </p>
 
-        <div class="acercaDe-list">
+        <div class="acercaDe__list">
 
             <div class="acercade__elemento" data-info="soporte">
-            <img src="./images/iconos/support.svg" class="acercaDe__icono" alt="">
+            <img src="./images/iconos/icono_adminSoporte.svg" class="acercaDe__icono" alt="">
             <h3 class="acercaDe__titulo">Soporte técnico</h3>
             </div>
 
             <div class="acercade__elemento" data-info="software">
-            <img src="./images/iconos/download.svg" class="acercaDe__icono" alt="">
+            <img src="./images/iconos/icono_adminInstalacion.svg" class="acercaDe__icono" alt="">
             <h3 class="acercaDe__titulo">Instalación de software</h3>
             </div>
 
             <div class="acercade__elemento" data-info="red">
-            <img src="./images/iconos/infra.svg" class="acercaDe__icono" alt="">
+            <img src="./images/iconos/icono_adminRedes.svg" class="acercaDe__icono" alt="">
             <h3 class="acercaDe__titulo">Infraestructura de red</h3>
             </div>
 
             <div class="acercade__elemento" data-info="gestion">
-            <img src="./images/iconos/admin.svg" class="acercaDe__icono" alt="">
+            <img src="./images/iconos/icono_adminGestion.svg" class="acercaDe__icono" alt="">
             <h3 class="acercaDe__titulo">Gestión académico-administrativa</h3>
             </div>
 
@@ -89,9 +89,9 @@
         </section>
 
         <!-- Seccion de informacion relevante -->
-        <section class="info">
-            <div class="info__contenedor">
-                <div class="info__texto">
+        <section class="infoAdcional">
+            <div class="infoAdcional__contenedor">
+                <div class="infoAdcional__texto">
                     <h2 class="subtitulo"></h2>
                         <p> La Administración de Cómputo del Departamento de Computación contribuye directamente al 
                             desarrollo de las actividades de docencia al asegurar el correcto funcionamiento de los 
@@ -101,14 +101,14 @@
                         </p>
                 </div>
 
-                <div class="info__imagen">
-                <img src="./images/admin_vista.jpg" alt="Departamento de cómputo">
+                <div class="infoAdcional__imagen">
+                <img src="./images/fotos/admin_vista.jpg" alt="Departamento de cómputo">
                 </div>
             </div>
         </section>
         
         <!-- Servicio socail -->
-        <section class="servicio__social contenedor">
+        <section class="servicioSocial contenedor">
             <h2 class="subtitulo">Servicio social</h2>
             <h2 class="subsubtitulo">Administración de Cómputo</h2>
 
@@ -120,11 +120,11 @@
                 universitaria.
             </p>
 
-            <div class="service-list">
-                <div> <img src="./images/iconos/icono_persona.svg" class="serviciosocial__iconos" alt="icono"><strong>Modalidad:</strong> Presencial</div>
-                <div><img src="./images/iconos/icono_reloj.svg" class="serviciosocial__iconos" alt="icono"><strong>Turno:</strong> Flexible / Mixto</div>
-                <div><img src="./images/iconos/icono_calendario.svg" class="serviciosocial__iconos" alt="icono"><strong>Horario:</strong> Lunes a viernes de 7 a 21 horas. Sábado de 9 a 14 horas</div>
-                <div><img src="./images/iconos/icono_ubicacion.svg" class="serviciosocial__iconos" alt="icono"><strong>Ubicación:</strong> Facultad de ingenieria, segundo piso del edificio Q.</div>
+            <div class="servicioSocial__lista">
+                <div> <img src="./images/iconos/icono_persona.svg" class="servicioSocial__iconos" alt="icono"><strong>Modalidad:</strong> Presencial</div>
+                <div><img src="./images/iconos/icono_reloj.svg" class="servicioSocial__iconos" alt="icono"><strong>Turno:</strong> Flexible / Mixto</div>
+                <div><img src="./images/iconos/icono_calendario.svg" class="servicioSocial__iconos" alt="icono"><strong>Horario:</strong> Lunes a viernes de 7 a 21 horas. Sábado de 9 a 14 horas</div>
+                <div><img src="./images/iconos/icono_ubicacion.svg" class="servicioSocial__iconos" alt="icono"><strong>Ubicación:</strong> Facultad de ingenieria, segundo piso del edificio Q.</div>
             </div>
 
 
@@ -145,12 +145,12 @@
             </div>
 
             <!-- Botones carreras -->
-            <div class="info__despegable" id="info__despegable">
-            <div class="infodespegable__caja">
-                <button class="infodespegable__close">×</button>
+            <div class="servicioSocial__infoDespegable" id="servicioSocial__infoDespegable">
+            <div class="servicioSocial__infoDespegableCaja">
+                <button class="servicioSocial__infoDespegableClose">×</button>
 
-                <h4 id="infodespegable__titulo"></h4>
-                <ul id="infodespegable__list"></ul>
+                <h4 id="servicioSocial__infoDespegableTitulo"></h4>
+                <ul id="servicioSocial__lista"></ul>
             </div>
             </div>
 
@@ -307,10 +307,10 @@
             </p>
 
             <div class="footer__social">
-            <a href="https://www.facebook.com/FacultadIngenieriaUNAM" target="_blank" ><img src="./images/iconos/socialMediaFace.svg" alt="" class="footer_social--img"></a>
-            <a href="https://x.com/FIUNAM_MX" target="_blank" ><img src="./images/iconos/socialMediaX.svg" alt="" class="footer_social_X"></a>
-            <a href="https://www.instagram.com/fiunam_mx" target="_blank" ><img src="./images/iconos/socialMediaInsta.svg" alt="" class="footer_social--img"></a>
-            <a href="https://www.youtube.com/tvingenieria" target="_blank" ><img src="./images/iconos/socialMediaYoutube.svg" alt="" class="footer_social--img"></a>
+            <a href="https://www.facebook.com/FacultadIngenieriaUNAM" target="_blank" ><img src="./images/iconos/icono_footerFacebook.svg" alt="" class="footer_social--img"></a>
+            <a href="https://x.com/FIUNAM_MX" target="_blank" ><img src="./images/iconos/icono_footerX.svg" alt="" class="footer_social_X"></a>
+            <a href="https://www.instagram.com/fiunam_mx" target="_blank" ><img src="./images/iconos/icono_footerInstagram.svg" alt="" class="footer_social--img"></a>
+            <a href="https://www.youtube.com/tvingenieria" target="_blank" ><img src="./images/iconos/icono_footerYoutube.svg" alt="" class="footer_social--img"></a>
             </div>
         </div>
         </footer>
