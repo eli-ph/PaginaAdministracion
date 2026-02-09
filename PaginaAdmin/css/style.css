@@ -249,17 +249,6 @@ html{
   text-align: left;
 }
 
-@media (max-width: 1024px){
-  .acercaDe__list{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px){
-  .acercaDe__list{
-    grid-template-columns: 1fr;
-  }
-}
 
 /*Info adicional*/
 .infoAdcional{ 
@@ -340,24 +329,6 @@ grid-column: 1 / 2;
 grid-row: 1 / 2;
 }
 
-@media (max-width: 768px){
-  .infoAdcional__contenedor{
-    grid-template-columns: 1fr;
-  }
-
-  .info__texto,
-  .infoAdcional__imagen{
-    grid-column: auto;
-    grid-row: auto;
-  }
-}
-
-@media (max-width: 768px){
-  .infoAdcional__texto,
-  .infoAdcional__imagen{
-    grid-column: auto;
-  }
-}
 /*Seccion Servicio Social*/
 
 .servicio{
@@ -607,11 +578,6 @@ grid-row: 1 / 2;
     align-items: center;
 }
 
-@media (max-width: 768px) {
-    .contenedor__descripcion{
-        grid-template-columns: 20px 1fr 20px;
-    }
-}
 
 .descripcion__cuerpo{
     display: grid;
@@ -627,13 +593,6 @@ grid-row: 1 / 2;
     padding-left: 60px;
 }
 
-@media (max-width: 768px) {
-    .descripcion__cuerpo{
-        grid-template-columns: 1fr;
-        padding-left: 20px;
-        gap: 1em;
-    }
-}
 
 .descripcion__cuerpo--shadow{
     pointer-events: unset;
@@ -651,14 +610,6 @@ grid-row: 1 / 2;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     margin-right: 90px;
 }
-@media (max-width: 768px) {
-    .descripcion__img{
-        width: 150px;
-        height: 150px;
-        margin-right: 20px;
-    }
-}
-
 
 .nombre__persona{
     color: #ffffff;
@@ -669,18 +620,11 @@ grid-row: 1 / 2;
     max-width: 500px;
 }
 
-@media (max-width: 768px) {
-    .descripcion__texto{
-        max-width: 100%;
-    }
-}
-
 
 .descripcion__flecha{
     width: 90%;
     cursor: pointer;
     transition: transform 0.3s;
-    
 }
 
 .descripcion__flecha:hover{
