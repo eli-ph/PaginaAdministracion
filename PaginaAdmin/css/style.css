@@ -15,7 +15,7 @@ html{
 }
 
 #AcercaDe{
-  scroll-margin-top: 2px;
+  scroll-margin-top: 50px;
 }
 
 #Contacto{
@@ -29,31 +29,8 @@ html{
     padding: var(--padding-container);
 }
 
-.hero{
-    width: 100%; /*100% DE ANCHO*/
-    height: 100vh; /*100% DEL ALTO DE LA PANTALLA*/
-    min-height: 600px;
-    max-height: 800px;
-    position:relative;
-    display: grid;
-    grid-template-rows: 100px 1fr; /*Crear como esas secciones*/
-    color:aliceblue;  
-}
-
-.hero::before{
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),  url('../images/fotos/imagen_presentacion.jpeg');
-    background-size: cover; /*Para que se adapte a la pagina*/
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 99%, 0 80%);
-    z-index: -1;
-
-}   
-/*seccion de navegacion*/
+  
+/*Seccion de navegacion*/
 .nav__contenedor{
     max-width: 13000px; /* Ajustar el ancho máximo */
     margin: 0 auto;
@@ -61,13 +38,18 @@ html{
     
 }
 .nav{
-    height: auto; /* Cambiar a auto para que se ajuste al contenido */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
+
     background-color: rgba(246, 1, 1, 0.80);
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas */
+    z-index: 1000;
 }
 
 .nav__titulo{
@@ -116,17 +98,27 @@ html{
     display: var(--show,none);
 }
 
-/*Modificar la parte de HERO, descripcion aula*/
-.hero__contenedor{
-    padding-top: 140px;
-    max-width: 900px;
-    --padding-container: 0;
+/*Descripcion aula*/
+.hero{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    max-height: 700px;
+    position: relative;
     display: grid;
-    grid-auto-rows: max-content;
-    align-content:center;
+    grid-template-rows: 1fr;
+    color: aliceblue;
+    overflow: hidden; 
+}
+
+.hero__contenedor{
+    padding-top: 110px;
+    max-width: 900px;
+    display: grid;
+    align-content: center;
     gap: 2em;
     padding-bottom: 150px;
     text-align: center;
+    margin: auto;
 }
 
 .hero__titulo{
@@ -141,23 +133,42 @@ html{
     line-height: 1.4;
 }
 
-.boton{
-    display: inline-block;
-    justify-self: center;
-    color: aliceblue;
-    background-color: rgba(246, 1, 1);
-    text-decoration: none;
-    padding: 13px 20px;
-    border-radius: 30px;
+.hero__slides{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero__slide{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 89%, 0 78%);
+}
+
+.hero__slide::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero__slide.active{
+  opacity: 1;
 }
 
 
-/* Seccion Acerca De */
+
 /* Seccion Acerca De */
 
 .acercaDe{
     text-align: center;
     padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .subtitulo{
@@ -250,6 +261,7 @@ html{
   }
 }
 
+/*Info adicional*/
 .infoAdcional{ 
     background: #ffffff; padding: 80px 0; 
     margin-top: 10px;
