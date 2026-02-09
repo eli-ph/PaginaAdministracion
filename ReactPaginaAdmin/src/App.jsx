@@ -22,8 +22,8 @@ function App() {
         <AcercaDe />
         <InfoAdicional />
         <ServicioSocial />
-        <PreguntasFrecuentes />
         <Contacto />
+        <PreguntasFrecuentes />
       </main>
 
       {/* FOOTER */}
