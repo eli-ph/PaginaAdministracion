@@ -1,31 +1,44 @@
 import { useEffect, useState } from "react";
 
-function Hero() {
-  const slides = [
-    "/images/fotos/admin_vista.jpg",
-    "/images/fotos/imagen_presentacion.jpeg"
-  ];
+const slides = [
+  "/public/image/fotos/admin_vista.jpg",
+  "/public/image/fotos/imagen_presentacion.jpeg"
+];
 
+function Hero() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setCurrent(c => (c + 1) % slides.length);
+    const interval = setInterval(() => {
+      setCurrent(prev => (prev + 1) % slides.length);
     }, 5000);
 
-    return () => clearInterval(id);
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="hero">
       <div className="hero__slides">
-        {slides.map((img, i) => (
+        {slides.map((img, index) => (
           <div
-            key={i}
-            className={`hero__slide ${i === current ? "active" : ""}`}
+            key={index}
+            className={`hero__slide ${index === current ? "active" : ""}`}
             style={{ backgroundImage: `url(${img})` }}
           />
         ))}
+      </div>
+
+      <div className="hero__contenedor contenedor">
+        <h1 className="hero__titulo">
+          Conoce el área de Administración
+        </h1>
+
+        <p className="hero__parrafo">
+          La Administración de Cómputo del Departamento de Computación es responsable de
+          brindar soporte técnico en hardware, software e infraestructura de red a los
+          laboratorios de cómputo destinados a la docencia, así como a los cubículos y
+          equipos del personal académico del Departamento.
+        </p>
       </div>
     </section>
   );
