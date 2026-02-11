@@ -6,7 +6,7 @@ const ServicioSocial = () => {
 
   const dataCarreras = {
     electrica_comunicaciones: {
-      title: "Ingeniería eléctrica electrónica y e ingeniería en telecomunicaciones",
+      title: "Ingeniería eléctrica electrónica e ingeniería en telecomunicaciones",
       items: ["Mantenimiento preventivo y correctivo de equipo de cómputo", "Revisión e implementación de infraestructura de red", "Participación en el desarrollo de proyectos", "Asesorías académicas y técnicas en áreas de cómputo", "Brindar soporte técnico"]
     },
     compu: {
