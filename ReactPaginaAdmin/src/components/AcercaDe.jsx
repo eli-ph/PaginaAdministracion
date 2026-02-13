@@ -86,7 +86,6 @@ const AcercaDe = () => {
 
       </div>
 
-      {/* 🔴 MISMO MODAL QUE SERVICIO SOCIAL */}
       {modalData && (
         <div
           className="servicioSocial__infoDespegable"

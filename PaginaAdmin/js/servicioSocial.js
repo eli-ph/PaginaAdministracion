@@ -129,4 +129,3 @@ modal.addEventListener("click", e => {
     document.getElementById("servicioSocial__infoDespegable").style.display = "none";
   });
 })();
-

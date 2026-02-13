@@ -16,8 +16,7 @@ const Footer = () => {
         <div className="footer__info">
           <h4>Universidad Nacional Autónoma de México</h4>
           <p>
-            Facultad de Ingeniería, Av. Universidad 3000, Ciudad Universitaria,
-            Coyoacán, México D.F., CP. 04510
+            Facultad de Ingeniería, Av. Universidad 3000, C.U., Coyoacán, 04510 Ciudad de México, CDMX
           </p>
           <p><strong>Teléfono:</strong> 56 22 08 66</p>
           <p><strong>Fax:</strong> 56 16 28 90</p>
