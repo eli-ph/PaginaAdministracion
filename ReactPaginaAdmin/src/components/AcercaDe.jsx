@@ -11,7 +11,7 @@ const infoAcerca = {
   soporte: {
     title: "Soporte técnico",
     items: [
-      "Configuración y mantenimiento de equipo de cómputo",
+      "Configuracion y mantenimiento de equipo de cómputo, utilizaods en laboratorios de docencia y en cubiculos de profesores",
       "Diagnóstico y reparación de equipos",
       "Atención a fallas de hardware",
       "Mantenimiento preventivo"
@@ -21,7 +21,7 @@ const infoAcerca = {
     title: "Instalación de software",
     items: [
       "Instalación de sistemas operativos",
-      "Instalación de software especializado"
+      "Instalación de software especializado requerido para cada asignatura que se imparte en el Departamento de Computación"
     ]
   },
   red: {
@@ -29,12 +29,15 @@ const infoAcerca = {
     items: [
       "Cableado estructurado",
       "Configuración de switches",
-      "Soporte a red interna"
+      "Soporte a red interna",
+            "Atención a fallas y diagnostico de la red"
     ]
   },
   gestion: {
     title: "Gestión académico-administrativa",
     items: [
+      "Apoyo en la organización de actividades académicas como eventos, transmisiones, cursos, diplomados, visitas, etc",
+      "Administrativas como impresion de publicidad, levantamiento de inventarios, documentación de procedimientos",
       "Organización de actividades académicas",
       "Documentación de procedimientos"
     ]
@@ -59,7 +62,8 @@ const AcercaDe = () => {
       <h2 className="subtitulo">¿Qué se hace en administración?</h2>
 
       <p className="acercaDe__parrafo">
-        El personal de la Administración de Cómputo apoya en diversas áreas.
+        El personal de la Administración de Cómputo del Departamento de Computación
+        apoya en diversas áreas del cómputo a alumnos y al personal adscrito al Departamento.
       </p>
 
       <div className="acercaDe__list">
