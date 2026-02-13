@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/ServicioSocial.css";
 
 const ServicioSocial = () => {
 
@@ -53,7 +54,7 @@ const ServicioSocial = () => {
   };
 
   return (
-    <section className="servicioSocial contenedor">
+    <section className="servicioSocial contenedor__servicioSocial">
 
       <h2 className="subtitulo">Servicio social</h2>
       <h2 className="subsubtitulo">Administración de Cómputo</h2>
@@ -69,22 +70,22 @@ const ServicioSocial = () => {
       {/* Información general */}
       <div className="servicioSocial__lista">
         <div>
-          <img src="/public/image/iconos/icono_persona.svg" className="servicioSocial__iconos" alt="icono modalidad" />
+          <img src="/image/iconos/icono_persona.svg" className="servicioSocial__iconos" alt="icono modalidad" />
           <strong>Modalidad:</strong> Presencial
         </div>
 
         <div>
-          <img src="/public/image/iconos/icono_reloj.svg" className="servicioSocial__iconos" alt="icono turno" />
+          <img src="/image/iconos/icono_reloj.svg" className="servicioSocial__iconos" alt="icono turno" />
           <strong>Turno:</strong> Flexible / Mixto
         </div>
 
         <div>
-          <img src="public/image/iconos/icono_calendario.svg" className="servicioSocial__iconos" alt="icono horario" />
+          <img src="/image/iconos/icono_calendario.svg" className="servicioSocial__iconos" alt="icono horario" />
           <strong>Horario:</strong> Lunes a viernes de 7 a 21 horas. Sábado de 9 a 14 horas
         </div>
 
         <div>
-          <img src="/public/image/iconos/icono_ubicacion.svg" className="servicioSocial__iconos" alt="icono ubicación" />
+          <img src="/image/iconos/icono_ubicacion.svg" className="servicioSocial__iconos" alt="icono ubicación" />
           <strong>Ubicación:</strong> Facultad de ingeniería, segundo piso del edificio Q.
         </div>
       </div>

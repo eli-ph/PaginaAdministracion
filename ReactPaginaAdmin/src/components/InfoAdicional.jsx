@@ -1,3 +1,5 @@
+import "../styles/InfoAdicional.css";
+
 const InfoAdicional = () => {
   return (
     <section className="infoAdcional">
@@ -17,7 +19,7 @@ const InfoAdicional = () => {
 
         <div className="infoAdcional__imagen">
           <img
-            src="/public/image/fotos/admin_vista.jpg"
+            src="/image/fotos/admin_vista.jpg"
             alt="Departamento de cómputo"
           />
         </div>

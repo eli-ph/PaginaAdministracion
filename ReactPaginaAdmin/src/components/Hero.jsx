@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import "../styles/Hero.css";
 
 const slides = [
-  "/public/image/fotos/admin_vista.jpg",
-  "/public/image/fotos/imagen_presentacion.jpeg"
+  "/image/fotos/admin_vista.jpg",
+  "/image/fotos/imagen_presentacion.jpeg"
 ];
 
 function Hero() {

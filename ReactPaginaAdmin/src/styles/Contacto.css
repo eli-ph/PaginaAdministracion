@@ -1,0 +1,84 @@
+/*Seccion Personas a cargo*/
+.descripcion{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #db0000, #ff1a1a);
+}
+
+.contenedor__descripcion{
+    display:grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap:1em;
+    align-items: center;
+}
+
+
+.descripcion__cuerpo{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+    padding-left: 60px;
+}
+
+
+.descripcion__cuerpo--shadow{
+    pointer-events: unset;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.descripcion__img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    margin-right: 90px;
+}
+
+.nombre__persona{
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 10px; 
+}
+.descripcion__texto{
+    max-width: 500px;
+}
+
+
+.descripcion__flecha{
+    width: 90%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.descripcion__flecha:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.descripcion__cargo{
+    background-color: aliceblue;
+    color: rgba(246, 1, 1);
+    display: inline-block;
+    padding:6px;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.descropcion{
+    margin-top: 20px;
+    font-size: 16px;
+    color: #e4e4e4;
+    line-height: 1.8;
+    padding-left: 30px;
+}

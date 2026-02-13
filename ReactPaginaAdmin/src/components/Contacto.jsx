@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/Contacto.css";
 
 const ContactoCarrusel = () => {
 
@@ -9,7 +10,7 @@ const ContactoCarrusel = () => {
       cargo: "Responsable",
       telefono: "5556223044",
       correo: "jrg_sln@fi-b.unam.mx",
-      imagen: "/public/image/personas/solano.png"
+      imagen: "/image/personas/solano.png"
     },
     {
       id: 2,
@@ -17,7 +18,7 @@ const ContactoCarrusel = () => {
       cargo: "Coordinadora",
       telefono: "5556223077",
       correo: "raldeco@unam.mx",
-      imagen: "/public/image/personas/rocio.png"
+      imagen: "/image/personas/rocio.png"
     }
   ];
 
@@ -40,7 +41,7 @@ const ContactoCarrusel = () => {
       <div className="contenedor__descripcion contenedor">
 
         <img
-          src="/public/image/iconos/icono_flechaIzquierda.svg"
+          src="/image/iconos/icono_flechaIzquierda.svg"
           className="descripcion__flecha"
           alt="Flecha izquierda"
           onClick={anterior}
@@ -81,7 +82,7 @@ const ContactoCarrusel = () => {
         ))}
 
         <img
-          src="/public/image/iconos/icono_flechaDerecha.svg"
+          src="/image/iconos/icono_flechaDerecha.svg"
           className="descripcion__flecha"
           alt="Flecha derecha"
           onClick={siguiente}

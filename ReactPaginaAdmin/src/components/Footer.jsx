@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Footer.css";
 
 const Footer = () => {
   return (
@@ -85,7 +86,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/public/image/iconos/icono_footerFacebook.svg"
+              src="/image/iconos/icono_footerFacebook.svg"
               alt="Facebook"
               className="footer_social--img"
             />
@@ -97,7 +98,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/public/image/iconos/icono_footerX.svg"
+              src="/image/iconos/icono_footerX.svg"
               alt="X"
               className="footer_social_X"
             />
@@ -109,7 +110,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/public/image/iconos/icono_footerInstagram.svg"
+              src="/image/iconos/icono_footerInstagram.svg"
               alt="Instagram"
               className="footer_social--img"
             />
@@ -121,7 +122,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/public/image/iconos/icono_footerYoutube.svg"
+              src="/image/iconos/icono_footerYoutube.svg"
               alt="YouTube"
               className="footer_social--img"
             />

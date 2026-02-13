@@ -1,0 +1,62 @@
+/*Descripcion aula*/
+.hero{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    max-height: 700px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr;
+    color: aliceblue;
+    overflow: hidden; 
+}
+
+.hero__contenedor{
+    padding-top: 110px;
+    max-width: 900px;
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-bottom: 150px;
+    text-align: center;
+    margin: auto;
+}
+
+.hero__titulo{
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 700;
+
+}
+
+.hero__parrafo{
+    margin-bottom: 40px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.4;
+}
+
+.hero__slides{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero__slide{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 95%, 0 78%);
+}
+
+.hero__slide::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero__slide.active{
+  opacity: 1;
+}

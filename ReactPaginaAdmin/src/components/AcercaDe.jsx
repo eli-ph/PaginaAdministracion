@@ -1,9 +1,11 @@
 import { useState } from "react";
+import "../styles/AcercaDe.css";
 
-import iconoSoporte from "/public/image/iconos/icono_adminSoporte.svg";
-import iconoSoftware from "/public/image/iconos/icono_adminInstalacion.svg";
-import iconoRed from "/public/image/iconos/icono_adminRedes.svg";
-import iconoGestion from "/public/image/iconos/icono_adminGestion.svg";
+
+import iconoSoporte from "/image/iconos/icono_adminSoporte.svg";
+import iconoSoftware from "/image/iconos/icono_adminInstalacion.svg";
+import iconoRed from "/image/iconos/icono_adminRedes.svg";
+import iconoGestion from "/image/iconos/icono_adminGestion.svg";
 
 const infoAcerca = {
   soporte: {

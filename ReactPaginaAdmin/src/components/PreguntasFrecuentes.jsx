@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/PreguntasFrecuentes.css";
 
 const PreguntasFrecuentes = () => {
   const [preguntaActiva, setPreguntaActiva] = useState(null);
@@ -54,7 +55,7 @@ const PreguntasFrecuentes = () => {
                   }`}
                 >
                   <img
-                    src="/public/image/iconos/icono_peguntasFrecuentes.svg"
+                    src="/image/iconos/icono_peguntasFrecuentes.svg"
                     alt=""
                     className="imagenes__preguntasF"
                   />
