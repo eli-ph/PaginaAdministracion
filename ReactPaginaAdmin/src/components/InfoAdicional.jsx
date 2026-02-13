@@ -6,7 +6,6 @@ const InfoAdicional = () => {
       <div className="infoAdcional__contenedor">
 
         <div className="infoAdcional__texto">
-          <h2 className="subtitulo">Información relevante</h2>
           <p>
             La Administración de Cómputo del Departamento de Computación contribuye
             directamente al desarrollo de las actividades de docencia al asegurar el

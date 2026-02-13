@@ -2,8 +2,9 @@
 
 .acercaDe{
     text-align: center;
-    padding-bottom: 30px;
     padding-top: 30px;
+    padding-bottom: 10px;
+
 }
 
 .subtitulo{
@@ -29,7 +30,7 @@
     gap: 1em;
     overflow: hidden;
     grid-template-columns: repeat(auto-fit, minmax(400px,auto)); 
-    padding-bottom: 30px;
+    padding-bottom:   0px;
 }
 
 .acercade__elemento{
@@ -79,10 +80,11 @@
 
 .acercaDe__list{
   max-width: 1100px;
-  margin: 40px auto;
+  margin: 0px auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  padding-bottom: 0;
 }
 
 @media (max-width: 1024px){
