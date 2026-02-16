@@ -4,7 +4,6 @@ import "../styles/Nav.css";
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Bloquear scroll cuando el menú esté abierto
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
