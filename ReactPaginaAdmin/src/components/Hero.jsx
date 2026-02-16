@@ -3,7 +3,10 @@ import "../styles/Hero.css";
 
 const slides = [
   "/image/fotos/admin_vista.jpg",
-  "/image/fotos/imagen_presentacion.jpeg"
+  "/image/fotos/imagen_presentacion.jpeg",
+  "/image/fotos/admin_switches.jpg",
+  "/image/fotos/cu.jpg"
+  
 ];
 
 function Hero() {
@@ -12,7 +15,7 @@ function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => (prev + 1) % slides.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);

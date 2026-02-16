@@ -16,7 +16,7 @@ const PreguntasFrecuentes = () => {
     {
       pregunta: "¿Dónde se encuentra administración?",
       respuesta:
-        'Se encuentra en el Conjunto Sur de la Facultad de Ingeniería, segundo piso del edificio "Q" (Ing. Luis G. Valdés Vallejo), en las oficinas de la División de Ingeniería Eléctrica de la FI, UNAM.',
+        'Se encuentra en el Conjunto Sur de la Facultad de Ingeniería, segundo piso del edificio "Q" (Ing. Luis G. Valdés Vallejo), en las oficinas del Departamento de Computación de la FI, UNAM.',
     },
     {
       pregunta: "¿Cuál es el horario de atención?",
