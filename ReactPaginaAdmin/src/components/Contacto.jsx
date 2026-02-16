@@ -64,14 +64,14 @@ const ContactoCarrusel = () => {
                 </span>
               </h2>
 
-              <p className="descropcion">
+              <p className="descripcion">
                 Teléfono: {persona.telefono}
                 <br />
                 Correo: {persona.correo}
               </p>
             </div>
 
-            <figure className="descipcionimagen">
+            <figure className="descripcion__img">
               <img
                 src={persona.imagen}
                 alt={persona.nombre}
