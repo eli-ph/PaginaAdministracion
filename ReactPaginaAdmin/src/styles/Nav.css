@@ -6,7 +6,7 @@ body{
 
 /* NAVBAR */
 .nav{
-  position: fixed;
+  
   top: 0;
   left: 0;
   width: 100%;
@@ -29,8 +29,9 @@ body{
   gap: 8px;
 }
 
-.nav__iconos{
-  width: 20px;
+.nav__iconoAdmin{
+  width: 30px;
+  margin-left: 40px;
 }
 
 /* Links desktop */
@@ -80,12 +81,11 @@ body{
 .nav__drawer{
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0; 
   width: 280px;
   height: 100vh;
-  background: #1e1e1e;
-
-  transform: translateX(-100%);
+  background: rgba(255, 255, 255, 1);
+  transform: translateX(100%);
   transition: transform .3s ease;
 
   z-index: 2000;
@@ -97,16 +97,22 @@ body{
 }
 
 .nav__drawer-header{
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
+  width: 100%;
 }
 
+
 .nav__close-btn{
+  position: absolute;
+  top: 10px;
+  right: 60px;
+
   background: none;
   border: none;
-  color: white;
-  font-size: 22px;
+  color: #000000;
+  font-size: 26px;
   cursor: pointer;
+ 
 }
 
 .nav__drawer-links{
@@ -120,13 +126,22 @@ body{
 }
 
 .nav__drawer-links a{
-  color: #ccc;
+  color: #000000;
   text-decoration: none;
   font-size: 16px;
 }
 
 .nav__drawer-links a:hover{
   color: white;
+}
+
+.nav__iconos{
+    width: 30px;
+    margin-right: 15px;
+    width: 18px;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* RESPONSIVE */

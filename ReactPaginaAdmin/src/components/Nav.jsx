@@ -20,7 +20,7 @@ function Nav() {
             <img
               src="/image/iconos/icono_administracion.svg"
               alt=""
-              className="nav__iconos"
+              className="nav__iconoAdmin"
             />
             Administración
           </h2>
@@ -28,9 +28,9 @@ function Nav() {
 
         {/* Links desktop */}
         <ul className="nav__links-desktop">
-          <li><a href="/">Inicio</a></li>
-          <li><a href="#AcercaDe">Acerca de</a></li>
-          <li><a href="#Contacto">Contacto</a></li>
+          <li><a href="/"> <img src="/image/iconos/icono_inicio.svg" alt="" className="nav__iconos"/>Inicio</a></li>
+          <li><a href="#AcercaDe"> <img src="/image/iconos/icono_acercaDe.svg" alt="" className="nav__iconos"/>Acerca de</a></li>
+          <li><a href="#Contacto"> <img src="/image/iconos/icono_contacto.svg" alt="" className="nav__iconos"/>Contacto</a></li>
         </ul>
 
         {/* Hamburguesa móvil */}
@@ -62,9 +62,9 @@ function Nav() {
         </div>
 
         <ul className="nav__drawer-links">
-          <li><a href="/" onClick={() => setMenuOpen(false)}>Inicio</a></li>
-          <li><a href="#AcercaDe" onClick={() => setMenuOpen(false)}>Acerca de</a></li>
-          <li><a href="#Contacto" onClick={() => setMenuOpen(false)}>Contacto</a></li>
+          <li><a href="/" class="nav__textoTelefono" onClick={() => setMenuOpen(false)}> Inicio</a></li>
+          <li><a href="#AcercaDe"class="nav__textoTelefono" onClick={() => setMenuOpen(false)}>Acerca de</a></li>
+          <li><a href="#Contacto"class="nav__textoTelefono" onClick={() => setMenuOpen(false)}>Contacto</a></li>
         </ul>
       </aside>
     </>
