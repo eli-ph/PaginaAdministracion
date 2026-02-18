@@ -22,7 +22,7 @@ El proyecto fue migrado a **React** utilizando **Vite** como herramienta de desa
 
 ---
 
-## 🏗 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - React
 - Vite
@@ -34,7 +34,7 @@ El proyecto fue migrado a **React** utilizando **Vite** como herramienta de desa
 
 ---
 
-## 🖥 Requisitos del Entorno
+## Requisitos del Entorno
 
 Para ejecutar el proyecto es necesario contar con:
 
