@@ -1,98 +1,123 @@
-/*Info adicional*/
-.infoAdcional{ 
-    background: #ffffff; 
-    padding-bottom: 40px;
-    margin-top: -40px; 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    width: 80%; 
-}
-.infoAdcional__contenedor{ 
-    max-width: 1100px; 
-    margin: auto; display: grid; 
-    grid-template-columns: 1fr 1.1fr; 
-    gap: 60px; align-items: center; 
-    background: white; 
-    border-radius: 24px; 
-    padding: 40px 70px; 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
-    position: relative; 
+/* ===========================
+   Info adicional
+   =========================== */
+
+/* por si se nos paso algun infoAdcional */
+.infoAdicional,
+.infoAdcional {
+  --info-max-width: 1100px;
+  --info-wrapper-width: 80%;
+  --info-radius: 24px;
+  --info-accent: #ce0101;
+
+  background: #ffffff;
+  width: var(--info-wrapper-width);
+
+  margin: -40px auto 30px; 
+  padding-bottom: 40px;
 }
 
+.infoAdicional__contenedor,
+.infoAdcional__contenedor {
+  width: min(100%, var(--info-max-width));
+  margin: 0 auto;
 
-.infoAdcional__contenedor::before{
-    width: 100%;
-    height: 6px;
-    right: 0;
-    top: auto;
-    bottom: 0;
-    border-radius: 0 0 24px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+
+  background: #fff;
+  border-radius: var(--info-radius);
+  padding: 40px 70px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  isolation: isolate; 
 }
 
-
-
-.infoAdcional__contenedor::before{
+/* raya lateral roja */
+.infoAdicional__contenedor::before,
+.infoAdcional__contenedor::before {
   content: "";
   position: absolute;
-  right: 0;        
-  top: 0;  width: 10px;
-  height: 100%;
-  background: #ce0101;
-  border-radius: 0 24px 24px 0; 
-}
-.infoAdcional__contenedor{
-  transition: transform .3s ease, box-shadow .3s ease;
+  inset: 0 0 0 auto;  
+  width: 10px;
+  background: var(--info-accent);
+  border-radius: 0 var(--info-radius) var(--info-radius) 0;
+  pointer-events: none;
 }
 
-.infoAdcional__contenedor:hover{
+.infoAdicional__contenedor:hover,
+.infoAdcional__contenedor:hover,
+.infoAdicional__contenedor:focus-within,
+.infoAdcional__contenedor:focus-within {
   transform: scale(1.02);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
-.infoAdcional__contenedor:hover .subtitulo{
+
+
+.infoAdicional__contenedor:hover .subtitulo,
+.infoAdcional__contenedor:hover .subtitulo,
+.infoAdicional__contenedor:focus-within .subtitulo,
+.infoAdcional__contenedor:focus-within .subtitulo {
   color: rgb(224, 21, 21);
-  transition: color .3s ease;
 }
 
-
-
-.infoAdcional__texto p{
+.infoAdicional__texto p,
+.infoAdcional__texto p {
   font-size: 17px;
   line-height: 1.8;
   color: #555;
 }
 
-.infoAdcional__imagen img{
+.infoAdicional__imagen img,
+.infoAdcional__imagen img {
   width: 95%;
   object-fit: cover;
-  
+  display: block; 
 }
 
-.infoAdcional__texto{
-grid-column: 2 / 3;
-grid-row: 1 / 2;
+/* imagen izquierda, texto derecha */
+.infoAdicional__texto,
+.infoAdcional__texto {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 
-.infoAdcional__imagen{
-grid-column: 1 / 2;
-grid-row: 1 / 2;
+.infoAdicional__imagen,
+.infoAdcional__imagen {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
-@media (max-width: 768px){
-  .infoAdcional__contenedor{
-    grid-template-columns: 1fr;
+/* Responsive */
+@media (max-width: 768px) {
+  .infoAdicional,
+  .infoAdcional {
+    width: min(92%, var(--info-max-width));
+    margin-top: -20px; 
   }
 
-  .info__texto,
-  .infoAdcional__imagen{
+  .infoAdicional__contenedor,
+  .infoAdcional__contenedor {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 28px 22px;
+  }
+
+  .infoAdicional__texto,
+  .infoAdcional__texto,
+  .infoAdicional__imagen,
+  .infoAdcional__imagen {
     grid-column: auto;
     grid-row: auto;
   }
-}
 
-@media (max-width: 768px){
-  .infoAdcional__texto,
-  .infoAdcional__imagen{
-    grid-column: auto;
+  .infoAdicional__imagen img,
+  .infoAdcional__imagen img {
+    width: 100%;
   }
 }

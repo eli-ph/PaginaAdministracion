@@ -1,92 +1,130 @@
-/*Seccion Personas a cargo*/
-.descripcion{
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, #db0000, #ff1a1a);
+/* ===========================
+   Sección Personas a cargo
+   =========================== */
+
+.descripcion {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #db0000, #ff1a1a);
 }
 
-.contenedor__descripcion{
-    display:grid;
-    grid-template-columns: 50px 1fr 50px;
-    gap:1em;
-    align-items: center;
+.contenedor__descripcion {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  gap: 1em;
+  align-items: center;
 }
 
+/* Cuerpo  */
+.descripcion__cuerpo {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
 
-.descripcion__cuerpo{
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 
-    grid-column: 2/3;
-    grid-row: 1/2;
-    opacity: 0;
-    pointer-events: none;
-    padding-left: 60px;
+  opacity: 0;
+  pointer-events: none;
+
+  padding-left: 60px;
+
+  /* transición suave para cuadno use la flecha */
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
+
+/* Estado visible */
+.descripcion__cuerpo--shadow {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Imagen */
+.descripcion__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  object-fit: cover;
+  object-position: 50% 30%;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  margin-right: clamp(0px, 6vw, 90px);
+}
+
+/* Tipografías */
+.nombre__persona {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: 10px;
+}
+
+.descripcion__texto {
+  max-width: 500px;
+}
+
+.descripcion__parrafo,
+.descripcion__texto .descripcion {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #e4e4e4;
+  line-height: 1.8;
+  padding-left: 30px;
+}
+
+/* Flechas */
+.descripcion__flecha {
+  width: 90%;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.descripcion__flecha:hover {
+  transform: scale(1.2);
+}
+
+.descripcion__flecha:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
+}
+
+/* Cargo */
+.descripcion__cargo {
+  background-color: aliceblue;
+  color: rgba(246, 1, 1, 1);
+  display: inline-block;
+  padding: 6px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
 
 @media (max-width: 768px) {
-    .descripcion__cuerpo {
-        grid-template-columns: 1fr;
-        padding-left: 20px;
-        gap: 1em;
-    }
-}
+  .contenedor__descripcion {
+    grid-template-columns: 40px 1fr 40px;
+  }
 
+  .descripcion__cuerpo {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    gap: 1em;
+  }
 
-.descripcion__cuerpo--shadow{
-    pointer-events: unset;
-    opacity: 1;
-    transform: translateY(0);
-}
+  .descripcion__img {
+    margin-right: 0;
+    justify-self: center;
+  }
 
-.descripcion__img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 50% 30%;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    margin-right: 90px;
-}
-
-.nombre__persona{
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 10px; 
-}
-.descripcion__texto{
-    max-width: 500px;
-}
-
-
-.descripcion__flecha{
-    width: 90%;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.descripcion__flecha:hover{
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.descripcion__cargo{
-    background-color: aliceblue;
-    color: rgba(246, 1, 1);
-    display: inline-block;
-    padding:6px;
-    border-radius: 10px;
-    margin-top: 8px;
-}
-
-.descripcion{
-    margin-top: 20px;
-    font-size: 16px;
-    color: #e4e4e4;
-    line-height: 1.8;
-    padding-left: 30px;
+  .descripcion__parrafo,
+  .descripcion__texto .descripcion {
+    padding-left: 0;
+  }
 }
