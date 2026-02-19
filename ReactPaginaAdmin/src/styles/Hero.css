@@ -85,8 +85,19 @@
 }
 
 /* Accesibilidad: reducir animación si el usuario lo prefiere */
-@media (prefers-reduced-motion: reduce) {
-  .hero__slide {
-    transition: none;
+@media (max-width: 768px) {
+  .hero__slide{
+    clip-path: none;
+    height: 90%;
+  }
+  .contenedor{
+    max-width: 1000px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero__slide{
+    animation: none !important;
+    transition: none !important;
   }
 }

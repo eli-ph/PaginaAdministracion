@@ -137,7 +137,7 @@
   max-width: 90%;
 
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 100px;
 
   /* si el contenido crece, no rompe la pantalla */
   max-height: 90vh;
@@ -157,3 +157,5 @@
   outline: 2px solid rgba(0, 0, 0, 0.35);
   outline-offset: 2px;
 }
+
+

@@ -61,7 +61,7 @@
   padding: 30px 0;
   cursor: pointer;
 
-  color: var(--accent);
+  color: rgb(30, 30, 30);
 }
 
 .titulo__pregunta:focus-visible {
