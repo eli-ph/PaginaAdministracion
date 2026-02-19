@@ -6,6 +6,7 @@ import InfoAdicional from "./components/InfoAdicional";
 import Nav from "./components/Nav";
 import PreguntasFrecuentes from "./components/PreguntasFrecuentes";
 import ServicioSocial from "./components/ServicioSocial";
+import SeccionDesarrolladores from "./components/SeccionDesarrolladores";
 
 
 function App() {

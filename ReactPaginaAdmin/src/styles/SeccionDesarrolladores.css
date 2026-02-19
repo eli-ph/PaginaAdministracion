@@ -1,0 +1,89 @@
+/* ===========================
+   Área de Desarrollo
+   =========================== */
+
+.areaDesarrollo {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.areaDesarrollo__titulo {
+  font-size: 2.8rem;
+  color: #b30000;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.areaDesarrollo__descripcion {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* GRID */
+
+.areaDesarrollo__grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* CARDS */
+
+.areaDesarrollo__card {
+  background: #fafafa;
+  padding: 30px 25px;
+  border-radius: 18px;
+  text-align: center;
+  position: relative;
+
+  border-left: 6px solid #e60000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.areaDesarrollo__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* ICONOS */
+
+.areaDesarrollo__icono {
+  font-size: 2.5rem;
+  color: #e60000;
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+
+.areaDesarrollo__card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.areaDesarrollo__card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+
+  .areaDesarrollo__titulo {
+    font-size: 2.2rem;
+  }
+
+  .areaDesarrollo__descripcion {
+    font-size: 1rem;
+  }
+
+}

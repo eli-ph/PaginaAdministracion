@@ -5,7 +5,7 @@
 .descripcion {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #db0000, #ff1a1a);
+  background: linear-gradient(135deg, #db0000);
 }
 
 .contenedor__descripcion {
