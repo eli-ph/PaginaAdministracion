@@ -37,8 +37,8 @@ const PreguntasFrecuentes = () => {
         {preguntas.map((item, index) => (
           <article
             key={index}
-            className={`padding__preguntasF ${
-              preguntaActiva === index ? "padding__preguntasF--add" : ""
+            className={`preguntasF__item ${
+              preguntaActiva === index ? "preguntasF__item--add" : ""
             }`}
           >
             <div className="respuestas__preguntasF">
