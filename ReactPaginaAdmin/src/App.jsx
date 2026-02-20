@@ -23,6 +23,7 @@ function App() {
         <AcercaDe />
         <InfoAdicional />
         <ServicioSocial />
+        <SeccionDesarrolladores />
         <Contacto />
         <PreguntasFrecuentes />
       </main>

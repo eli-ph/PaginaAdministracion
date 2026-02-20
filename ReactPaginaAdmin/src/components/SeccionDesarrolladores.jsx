@@ -1,5 +1,5 @@
-import "../styles/SeccionDesarrolladores.css";
 
+import "../styles/SeccionDesarrolladores.css";
 
 
 const SeccionDesarrolladores = () => {
@@ -19,7 +19,7 @@ const SeccionDesarrolladores = () => {
       <div className="areaDesarrollo__grid">
 
         <div className="areaDesarrollo__card">
-          <FaCode className="areaDesarrollo__icono" />
+          <div className="areaDesarrollo__icono">💻</div>
           <h3>Desarrollo Web</h3>
           <p>
             Creación de plataformas institucionales, sistemas internos 
@@ -28,7 +28,7 @@ const SeccionDesarrolladores = () => {
         </div>
 
         <div className="areaDesarrollo__card">
-          <FaDatabase className="areaDesarrollo__icono" />
+          <div className="areaDesarrollo__icono">🗄️</div>
           <h3>Bases de Datos</h3>
           <p>
             Diseño y administración de bases de datos seguras 
@@ -37,7 +37,7 @@ const SeccionDesarrolladores = () => {
         </div>
 
         <div className="areaDesarrollo__card">
-          <FaServer className="areaDesarrollo__icono" />
+          <div className="areaDesarrollo__icono">🖥️</div>
           <h3>Backend & Servidores</h3>
           <p>
             Implementación de servicios, APIs y configuración 
@@ -46,7 +46,7 @@ const SeccionDesarrolladores = () => {
         </div>
 
         <div className="areaDesarrollo__card">
-          <FaLaptopCode className="areaDesarrollo__icono" />
+          <div className="areaDesarrollo__icono">🚀</div>
           <h3>Innovación Tecnológica</h3>
           <p>
             Desarrollo de nuevas soluciones tecnológicas 

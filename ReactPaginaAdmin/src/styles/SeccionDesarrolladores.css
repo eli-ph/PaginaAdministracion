@@ -1,89 +1,178 @@
 /* ===========================
-   Área de Desarrollo
+   Área de Desarrollo — Flow Curvo + estilo AcercaDe
    =========================== */
 
 .areaDesarrollo {
-  padding: 80px 0;
+  --accent: rgba(246, 1, 1, 1);
+  --accent-soft: rgba(246, 1, 1, 0.15);
+  --surface: #fafafa;
+  --radius: 18px;
+
+  padding: 100px 0;
   text-align: center;
+  position: relative;
 }
 
 .areaDesarrollo__titulo {
-  font-size: 2.8rem;
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
   color: #b30000;
   margin-bottom: 15px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .areaDesarrollo__descripcion {
-  max-width: 800px;
-  margin: 0 auto 50px;
+  max-width: 820px;
+  margin: 0 auto 70px;
   line-height: 1.8;
   font-size: 1.05rem;
   color: #444;
 }
 
-/* GRID */
-
+/* Contenedor*/
 .areaDesarrollo__grid {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-/* CARDS */
-
-.areaDesarrollo__card {
-  background: #fafafa;
-  padding: 30px 25px;
-  border-radius: 18px;
-  text-align: center;
+  width: min(1100px, 100%);
+  margin: 0 auto;
   position: relative;
 
-  border-left: 6px solid #e60000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Línea central */
+.areaDesarrollo__grid::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(246, 1, 1, 0.2),
+    rgba(246, 1, 1, 0.55),
+    rgba(246, 1, 1, 0.2)
+  );
+  z-index: 0;
+}
+
+/* ===========================
+   Cards: estilo AcercaDe
+   =========================== */
+
+.areaDesarrollo__card {
+  position: relative;
+  z-index: 1;
+
+  width: 260px;
+  min-height: 190px;
+
+  background: var(--surface);
+  border-radius: var(--radius);
+
+  padding: 22px 22px;
+  text-align: left;
+
+  border-left: 6px solid var(--accent);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 
-  transition: all 0.3s ease;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Alternancia vertical */
+.areaDesarrollo__card:nth-child(odd) {
+  transform: translateY(-60px);
+}
+
+.areaDesarrollo__card:nth-child(even) {
+  transform: translateY(60px);
+}
+
+/* Hover para que se resalte la card */
 .areaDesarrollo__card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(0) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
 }
 
-/* ICONOS */
+.areaDesarrollo__card::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+
+  top: calc(100% + 18px);
+  box-shadow: 0 0 0 6px var(--accent-soft);
+}
+
+.areaDesarrollo__card:nth-child(even)::after {
+  top: auto;
+  bottom: calc(100% + 18px);
+}
+
+/* Icono*/
 .areaDesarrollo__icono {
-  font-size: 2.5rem;
-  color: #e60000;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
 }
 
-/* TEXTO */
+/* zoom del icono en hover */
+.areaDesarrollo__card:hover .areaDesarrollo__icono {
+  transform: scale(1.08);
+}
 
+/* Texto */
 .areaDesarrollo__card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 700;
   color: #333;
 }
 
 .areaDesarrollo__card p {
   font-size: 0.95rem;
+  margin: 0;
   color: #555;
   line-height: 1.6;
 }
 
 /* ===========================
-   RESPONSIVE
+   Responsive
    =========================== */
 
-@media (max-width: 768px) {
-
-  .areaDesarrollo__titulo {
-    font-size: 2.2rem;
+@media (max-width: 900px) {
+  .areaDesarrollo__grid {
+    flex-direction: column;
+    gap: 22px;
   }
 
-  .areaDesarrollo__descripcion {
-    font-size: 1rem;
+  .areaDesarrollo__grid::before {
+    display: none;
   }
 
+  .areaDesarrollo__card {
+    width: min(520px, 100%);
+    transform: none !important;
+  }
+
+  .areaDesarrollo__card::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .areaDesarrollo__card,
+  .areaDesarrollo__icono {
+    transition: none;
+  }
 }
