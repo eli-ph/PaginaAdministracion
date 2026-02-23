@@ -16,7 +16,7 @@
 /* Contenedor principal */
 .servicioSocial {
   width: min(100%, 1000px);
-  margin: 60px auto 0;
+  margin: 60px auto 0px ;
   padding: 50px;
   padding-top: 5px; 
   text-align: center;
