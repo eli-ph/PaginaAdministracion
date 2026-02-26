@@ -1,8 +1,88 @@
-
+import { useEffect, useRef, useState } from "react";
 import "../styles/SeccionDesarrolladores.css";
 
-
 const SeccionDesarrolladores = () => {
+  const cardsRef = useRef([]);
+  const [visibleCards, setVisibleCards] = useState([]);
+
+  /* ==========================
+     SCROLL ANIMACIÓN TARJETAS
+  ========================== */
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.dataset.index);
+            setVisibleCards((prev) => [...new Set([...prev, index])]);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  /* ==========================
+     DATOS TARJETAS
+  ========================== */
+
+  const cards = [
+    {
+      title: "Desarrollo Web",
+      text: "Creación de plataformas institucionales y sistemas internos.",
+      side: "izq",
+    },
+    {
+      title: "Bases de Datos",
+      text: "Administración de bases de datos seguras y eficientes.",
+      side: "der",
+    },
+    {
+      title: "Backend & Servidores",
+      text: "Configuración de servicios y APIs institucionales.",
+      side: "izq",
+    },
+    {
+      title: "Contenedores",
+      text: "",
+      side: "der",
+    },
+  ];
+
+  /* ==========================
+     CARRUSEL
+  ========================== */
+
+  const imagenes = [
+    "/image/fotos/foto_devs.jpeg",
+    "/image/fotos/foto_aulaDevs1.jpg",
+    "/image/fotos/foto_aulaDevs2.jpg"
+  ];
+
+  const [indexCarrusel, setIndexCarrusel] = useState(0);
+
+  const next = () => {
+    setIndexCarrusel((prev) => (prev + 1) % imagenes.length);
+  };
+
+  const prev = () => {
+    setIndexCarrusel((prev) =>
+      prev === 0 ? imagenes.length - 1 : prev - 1
+    );
+  };
+
+  useEffect(() => {
+    const intervalo = setInterval(next, 5000);
+    return () => clearInterval(intervalo);
+  }, []);
+
   return (
     <section className="areaDesarrollo" id="AreaDesarrollo">
 
@@ -12,46 +92,71 @@ const SeccionDesarrolladores = () => {
 
       <p className="areaDesarrollo__descripcion">
         El área de desarrollo se encarga de diseñar, implementar y mantener 
-        soluciones tecnológicas que optimizan los procesos administrativos 
-        y académicos del Departamento de Computación.
+        soluciones tecnológicas que optimizan procesos administrativos y académicos.
       </p>
 
+      {/* ==========================
+          TIMELINE
+      ========================== */}
+
       <div className="areaDesarrollo__grid">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            data-index={index}
+            ref={(el) => (cardsRef.current[index] = el)}
+            className={`areaDesarrollo__card ${card.side} ${
+              visibleCards.includes(index) ? "visible" : ""
+            }`}
+          >
+            <img
+              src="/image/iconos/icono_areadeDevsCompu.svg"
+              alt=""
+              className="areaDesarrollo__icono"
+            />
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </div>
+        ))}
+      </div>
 
-        <div className="areaDesarrollo__card">
-          <div className="areaDesarrollo__icono"> <img src="/image/iconos/icono_areadeDevsCompu.svg" alt="" className="areaDesarrollo__icono" /></div>
-          <h3>Desarrollo Web</h3>
-          <p>
-            Creación de plataformas institucionales, sistemas internos 
-            y herramientas digitales para la comunidad universitaria.
-          </p>
-        </div>
+      {/* ==========================
+          CARRUSEL (AQUÍ VA)
+      ========================== */}
 
-        <div className="areaDesarrollo__card">
-          <div className="areaDesarrollo__icono"><img src="/image/iconos/icono_areadeDevsCompu.svg" alt="" className="areaDesarrollo__icono" /></div>
-          <h3>Bases de Datos</h3>
-          <p>
-            Diseño y administración de bases de datos seguras 
-            y eficientes para almacenamiento de información.
-          </p>
-        </div>
+      <div className="areaCarrusel">
 
-        <div className="areaDesarrollo__card">
-          <div className="areaDesarrollo__icono"><img src="/image/iconos/icono_areadeDevsCompu.svg" alt="" className="areaDesarrollo__icono" /></div>
-          <h3>Backend & Servidores</h3>
-          <p>
-            Implementación de servicios, APIs y configuración 
-            de servidores para garantizar disponibilidad.
-          </p>
-        </div>
+        <div className="carrusel">
 
-        <div className="areaDesarrollo__card">
-          <div className="areaDesarrollo__icono"><img src="/image/iconos/icono_areadeDevsCompu.svg" alt="" className="areaDesarrollo__icono" /></div>
-          <h3>Innovación Tecnológica</h3>
-          <p>
-            Desarrollo de nuevas soluciones tecnológicas 
-            alineadas con las necesidades académicas.
-          </p>
+          <div
+            className="carrusel__track"
+            style={{ transform: `translateX(-${indexCarrusel * 100}%)` }}
+          >
+            {imagenes.map((img, i) => (
+              <div className="carrusel__slide" key={i}>
+                <img src={img} alt="" />
+              </div>
+            ))}
+          </div>
+
+          <button className="carrusel__btn prev" onClick={prev}>
+            ‹
+          </button>
+
+          <button className="carrusel__btn next" onClick={next}>
+            ›
+          </button>
+
+          <div className="carrusel__dots">
+            {imagenes.map((_, i) => (
+              <span
+                key={i}
+                className={`dot ${i === indexCarrusel ? "active" : ""}`}
+                onClick={() => setIndexCarrusel(i)}
+              />
+            ))}
+          </div>
+
         </div>
 
       </div>

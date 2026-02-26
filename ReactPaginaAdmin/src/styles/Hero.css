@@ -4,8 +4,6 @@
 
 .hero {
   width: 100%;
-/*se tiene dobles por que es respaldo por si no entiende svh*/
-  /* mas gentil con moviles*/
   min-height: calc(100svh - 80px);
   /*incluye barras*/
   min-height: calc(100vh - 80px); 

@@ -3,10 +3,16 @@ import "../styles/Hero.css";
 
 const slides = [
   "/image/fotos/admin_vista.jpg",
-  "/image/fotos/imagen_presentacion.jpeg",
+  "/image/fotos/foto_admin2.jpg",
   "/image/fotos/admin_switches.jpg",
-  "/image/fotos/cu.jpg"
-  
+  "/image/fotos/foto_admin1.jpg",
+  "/image/fotos/foto_admin3.jpg",
+  "/image/fotos/foto_admin4.jpg",
+  "/image/fotos/foto_admin5.jpg",
+  "/image/fotos/foto_microsoft1.jpg",
+  "/image/fotos/foto_microsoft2.jpg",
+  "/image/fotos/foto_microsoft3.jpg",
+  "/image/fotos/foto_microsoft4.jpg"
 ];
 
 function Hero() {
