@@ -12,6 +12,11 @@
   padding: 40px 0 120px;
   text-align: center;
   position: relative;
+  width: min(100%, 1000px);
+  margin: 60px auto 0px ;
+  padding: 20px;
+  padding-top: 5px; 
+  text-align: center;
 }
 
 /* ===========================
@@ -139,17 +144,14 @@
 /* ===========================
    Icono
    =========================== */
-.areaDesarrollo__iconoDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
 
 .areaDesarrollo__icono {
   width: 48px;
   margin-bottom: 10px;
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .areaDesarrollo__card:hover .areaDesarrollo__icono {
