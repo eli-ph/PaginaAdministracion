@@ -54,7 +54,7 @@ const SeccionDesarrolladores = () => {
     },
     {
       title: "Contenedores",
-      text: "",
+      text: "Despliegue de aplicaciones a través de contenedores",
       side: "der",
       image: "/image/iconos/icono_contenedores.svg",
     },
