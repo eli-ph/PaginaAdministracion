@@ -44,7 +44,7 @@
   content: "";
   position: absolute;
   inset: 0 0 0 auto;  
-  width: 10px;
+  width: 0px;
   background: var(--info-accent);
   border-radius: 0 var(--info-radius) var(--info-radius) 0;
   pointer-events: none;

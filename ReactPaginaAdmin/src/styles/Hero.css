@@ -4,9 +4,8 @@
 
 .hero {
   width: 100%;
-  min-height: calc(100svh - 80px);
   /*incluye barras*/
-  min-height: calc(100vh - 80px); 
+  min-height: calc(104vh - 80px); 
   max-height: 700px;
 
   position: relative;

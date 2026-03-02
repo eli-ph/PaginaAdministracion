@@ -91,17 +91,13 @@ const AcercaDe = () => {
       </div>
 
       {modalData && (
-        <div
-          className="servicioSocial__infoDespegable"
-          onClick={handleCloseModal}
-          style={{ display: "flex" }}
-        >
+        <div className="modal" onClick={handleCloseModal}>
           <div
-            className="servicioSocial__infoDespegableCaja"
+            className="modal__contenido"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="servicioSocial__infoDespegableClose"
+              className="modal__cerrar"
               onClick={handleCloseModal}
             >
               ×
@@ -114,11 +110,9 @@ const AcercaDe = () => {
                 <li key={index}>{item}</li>
               ))}
             </ul>
-
           </div>
         </div>
       )}
-
     </section>
   );
 };

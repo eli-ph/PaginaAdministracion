@@ -139,6 +139,12 @@
 /* ===========================
    Icono
    =========================== */
+.areaDesarrollo__iconoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
 .areaDesarrollo__icono {
   width: 48px;
@@ -147,7 +153,7 @@
 }
 
 .areaDesarrollo__card:hover .areaDesarrollo__icono {
-  transform: scale(1.08);
+  transform: scale(1.09);
 }
 
 /* ===========================
@@ -304,15 +310,14 @@
    =========================== */
 
 @media (max-width: 900px) {
-
   .areaDesarrollo__grid::before {
     display: none;
   }
 
   .areaDesarrollo__card {
-    width: 90%;
+    width: 85%;
     align-self: center !important;
-    margin: 0 !important;
+    margin: 10px !important;
   }
 
   .areaDesarrollo__card::after {

@@ -36,23 +36,27 @@ const SeccionDesarrolladores = () => {
   const cards = [
     {
       title: "Desarrollo Web",
-      text: "Creación de plataformas institucionales y sistemas internos.",
+      text: "Creación de plataformas institucionales y sistemas internos. Uso de Portainer para administración, despliegue con GitHub actions, control de versiones con Git.",
       side: "izq",
+      image: "/image/iconos/icono_areadeDevsCompu.svg",
     },
     {
       title: "Bases de Datos",
       text: "Administración de bases de datos seguras y eficientes.",
       side: "der",
+      image: "/image/iconos/icono_bases.svg",
     },
     {
       title: "Backend & Servidores",
       text: "Configuración de servicios y APIs institucionales.",
       side: "izq",
+      image: "/image/iconos/icono_servers.svg",
     },
     {
       title: "Contenedores",
       text: "",
       side: "der",
+      image: "/image/iconos/icono_contenedores.svg",
     },
   ];
 
@@ -79,9 +83,14 @@ const SeccionDesarrolladores = () => {
   };
 
   useEffect(() => {
-    const intervalo = setInterval(next, 5000);
-    return () => clearInterval(intervalo);
-  }, []);
+  const intervalo = setInterval(() => {
+    setIndexCarrusel((prev) => 
+      (prev + 1) % imagenes.length
+    );
+  }, 6000); // ahora 6 segundos
+
+  return () => clearInterval(intervalo);
+}, [imagenes.length]);
 
   return (
     <section className="areaDesarrollo" id="AreaDesarrollo">
@@ -109,11 +118,14 @@ const SeccionDesarrolladores = () => {
               visibleCards.includes(index) ? "visible" : ""
             }`}
           >
-            <img
-              src="/image/iconos/icono_areadeDevsCompu.svg"
-              alt=""
-              className="areaDesarrollo__icono"
-            />
+            
+          <div className="areaDesarrollo__iconoDiv"> 
+              <img
+                src={card.image}
+                alt={card.title}
+                className="areaDesarrollo__icono"
+              />
+            </div>
             <h3>{card.title}</h3>
             <p>{card.text}</p>
           </div>

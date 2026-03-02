@@ -222,7 +222,14 @@
    Responsive
    =========================== */
 
+@media (prefers-reduced-motion: reduce) {
+  .servicioSocial__infoDespegableCaja {
+    animation: none;
+  }
+}
+
 @media (max-width: 768px) {
+
   .servicioSocial {
     padding: 28px 18px;
   }
@@ -234,11 +241,106 @@
   .servicioSocial__Habilidades {
     grid-template-columns: 1fr;
   }
+
+  .servicioSocial__carreras {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .boton__carreras {
+    width: 100%;
+    border-radius: 16px;
+    padding: 16px 18px;
+    text-align: left;
+    font-size: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #ffffff;
+    color: #333;
+    border: 1px solid #e6e6e6;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+
+    opacity: 0;
+    transform: translateY(15px);
+    animation: aparecerBoton 0.5s ease forwards;
+   
+  
+  }
+
+  /* Animación escalonada opcional */
+  .boton__carreras:nth-child(1) { animation-delay: 0.1s; }
+  .boton__carreras:nth-child(2) { animation-delay: 0.2s; }
+  .boton__carreras:nth-child(3) { animation-delay: 0.3s; }
+  .boton__carreras:nth-child(4) { animation-delay: 0.4s; }
+
+  /* Flecha */
+  .boton__carreras::after {
+    content: "›";
+    font-size: 20px;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Efecto relleno animado */
+  .boton__carreras::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    width: 0%;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+
+  .boton__carreras {
+  position: relative;
+  z-index: 1;
 }
 
-/* reduce motion */
-@media (prefers-reduced-motion: reduce) {
-  .servicioSocial__infoDespegableCaja {
-    animation: none;
+.boton__carreras::before {
+  z-index: -1;
+}
+
+  /* Hover */
+  .boton__carreras:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .boton__carreras:hover::before {
+    width: 100%;
+  }
+
+  .boton__carreras:hover {
+    color:#fff;
+  }
+
+  .boton__carreras:hover::after {
+    transform: translateX(6px);
+    opacity: 1;
+  }
+
+  /* Cuando lo presionan en móvil */
+  .boton__carreras:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Animación */
+  @keyframes aparecerBoton {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
