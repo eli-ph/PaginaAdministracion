@@ -65,8 +65,8 @@ const SeccionDesarrolladores = () => {
   ========================== */
 
   const imagenes = [
-    "/image/fotos/foto_devs.jpeg",
     "/image/fotos/foto_aulaDevs1.jpg",
+    "/image/fotos/dev_calidad.jpeg",
     "/image/fotos/foto_aulaDevs2.jpg"
   ];
 
@@ -87,7 +87,7 @@ const SeccionDesarrolladores = () => {
     setIndexCarrusel((prev) => 
       (prev + 1) % imagenes.length
     );
-  }, 6000); // ahora 6 segundos
+  }, 8000); // ahora 8 segundos
 
   return () => clearInterval(intervalo);
 }, [imagenes.length]);
