@@ -305,6 +305,19 @@
   .carrusel__slide img {
     height: 300px;
   }
+
+  .carrusel__btn {
+  width: 28px;
+  height: 28px;
+  }
+
+  .carrusel__btn.prev {
+    left: 10px;
+  }
+
+  .carrusel__btn.next {
+    right: 10px;
+  }
 }
 
 /* ===========================
@@ -325,11 +338,35 @@
   .areaDesarrollo__card::after {
     display: none;
   }
+  .carrusel__btn {
+  width: 28px;
+  height: 28px;
+  }
+
+  .carrusel__btn.prev {
+    left: 10px;
+  }
+
+  .carrusel__btn.next {
+    right: 10px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .areaDesarrollo__card,
   .areaDesarrollo__icono {
     transition: none;
+  }
+  .carrusel__btn {
+  width: 28px;
+  height: 28px;
+  }
+
+  .carrusel__btn.prev {
+    left: 10px;
+  }
+
+  .carrusel__btn.next {
+    right: 10px;
   }
 }

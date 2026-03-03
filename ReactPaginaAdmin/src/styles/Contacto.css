@@ -127,4 +127,14 @@
   .descripcion__texto .descripcion {
     padding-left: 0;
   }
+
+  .descripcion__flecha {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor__descripcion {
+    grid-template-columns: 20px 1fr 30px;
+  }
 }

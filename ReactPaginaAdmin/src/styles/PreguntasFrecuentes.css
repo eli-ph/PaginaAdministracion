@@ -71,11 +71,15 @@
 
 /* Flecha que abre la pregunta */
 .flecha__pregunta {
-  border-radius: 50%;
-  background-color: #eaeaea;
-
   width: 25px;
   height: 25px;
+  min-width: 25px;
+  min-height: 25px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background-color: #eaeaea;
 
   display: flex;
   justify-content: center;
