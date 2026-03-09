@@ -8,40 +8,40 @@ const ServicioSocial = () => {
   const dataCarreras = {
     electrica_comunicaciones: {
       title: "Ingeniería eléctrica electrónica e ingeniería en telecomunicaciones",
-      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo", "Revisión e implementación de infraestructura de red", "Participación en el desarrollo de proyectos", "Asesorías académicas y técnicas en áreas de cómputo", "Brindar soporte técnico"]
+      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo.", "Revisión e implementación de infraestructura de red.", "Participación en el desarrollo de proyectos.", "Asesorías académicas y técnicas en áreas de cómputo.", "Brindar soporte técnico."]
     },
     compu: {
       title: "Ingeniería en computación (FI)",
-      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo", "Revisión e implementación de infraestructura de red", "Desarrollo de software", "Participación en el desarrollo de proyectos", "Asesorías académicas y técnicas en áreas de cómputo"]
+      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo.", "Revisión e implementación de infraestructura de red.", "Desarrollo de software.", "Participación en el desarrollo de proyectos.", "Asesorías académicas y técnicas en áreas de cómputo."]
     },
     industrial: {
       title: "Ingeniería industrial (FI)",
-      items: ["Soporte mantenimiento preventivo y correctivo de equipo de cómputo", "Asesorías académicas y técnicas en áreas de cómputo", "Descripción de procesos", "Participación en el desarrollo de proyectos", "Documentación de software"]
+      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo.", "Asesorías académicas y técnicas en áreas de cómputo", "Descripción de procesos", "Participación en el desarrollo de proyectos", "Documentación de software"]
     },
     mecatronica: {
       title: "Ingeniería mecatrónica (FI)",
-      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo", "Revisión e implementación de infraestructura de red", "Participación en el desarrollo de proyectos", "Asesorías académicas y técnicas en áreas de cómputo", "Brindar soporte técnico"]
+      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo.", "Revisión e implementación de infraestructura de red.", "Participación en el desarrollo de proyectos.", "Asesorías académicas y técnicas en áreas de cómputo.", "Brindar soporte técnico."]
     },
     datos: {
       title: "Ciencia de datos (IIMAS)",
-      items: ["Desarrollo de software", "Realizar análisis de datos", "Participación en el desarrollo de proyectos", "Asesorías académicas y técnicas en áreas de cómputo", "Generación de estadísticas y tendencias"]
+      items: ["Desarrollo de software.", "Realizar análisis de datos.", "Participación en el desarrollo de proyectos.", "Asesorías académicas y técnicas en áreas de cómputo.", "Generación de estadísticas y tendencias."]
     },
     info: {
       title: "Informática (FCA)",
-      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo", "Desarrollo de software", "Participación en el desarrollo de proyectos", "Asesorías académicas y técnicas en áreas de cómputo", "Brindar soporte técnico"]
+      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo.", "Desarrollo de software.", "Participación en el desarrollo de proyectos.", "Asesorías académicas y técnicas en áreas de cómputo.", "Brindar soporte técnico."]
     },
     tec_compu: {
       title: "Tec. Esp. en Computación (ENP)",
-      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo", "Revisión e implementación de infraestructura de red", "Participación en el desarrollo de proyectos", "Asesorías académicas y técnicas en áreas de cómputo", "Brindar soporte técnico"]
+      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo.", "Revisión e implementación de infraestructura de red.", "Participación en el desarrollo de proyectos.", "Asesorías académicas y técnicas en áreas de cómputo.", "Brindar soporte técnico."]
     },
     tec_desarrollo: {
       title: "Tec. Esp. en Sist. Comput. Desarrollo software (CCH)",
-      items: ["Desarrollo de software", "Documentación de sistemas", "Desarrollo de pruebas automatizadas", "Realización de diagramas de bd", "Participación en el desarrollo de proyectos"]
+      items: ["Desarrollo de software.", "Documentación de sistemas.", "Desarrollo de pruebas automatizadas.", "Realización de diagramas de Bd.", "Participación en el desarrollo de proyectos."]
     },
 
     tec_web: {
       title: "Tec. Esp. Sist. Comput. Diseño Aplicación Web BD (CCH)",
-      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo","Revisión e implementación de infraestructura de red","Desarrollo de software", "Participación en el desarrollo de proyectos", "Asesorías académicas y técnicas en áreas de cómputo"]
+      items: ["Mantenimiento preventivo y correctivo de equipo de cómputo.","Revisión e implementación de infraestructura de red.","Desarrollo de software.", "Participación en el desarrollo de proyectos.", "Asesorías académicas y técnicas en áreas de cómputo."]
     }
   };
 
