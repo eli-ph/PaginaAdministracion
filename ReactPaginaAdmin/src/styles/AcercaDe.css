@@ -84,12 +84,15 @@
   transform: translateY(-8px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
   outline: none;
+
+  background: rgba(246, 1, 1, 1); 
 }
 
 .acercaDe__icono {
   width: 48px;
   margin-bottom: 15px;
-  transition: transform 0.3s ease; /
+  transition: transform 0.3s ease, filter 0.3s ease;
+  
 }
 
 .acercaDe__elemento:hover .acercaDe__icono,
@@ -97,14 +100,20 @@
 .acercaDe__elemento:focus-visible .acercaDe__icono,
 .acercade__elemento:focus-visible .acercaDe__icono {
   transform: scale(1.1);
+  filter: brightness(0) invert(1);
 }
 
 .acercaDe__titulo {
   font-size: 1rem;
   font-weight: 600;
   color: #333;
+  transition: color 0.3s ease;
 }
 
+.acercaDe__elemento:hover .acercaDe__titulo,
+.acercade__elemento:hover .acercaDe__titulo {
+  color: white;
+}
 
 @media (max-width: 1024px) {
   .acercaDe__list {

@@ -6,6 +6,7 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #db0000);
+  margin-top: 35px;
 }
 
 .contenedor__descripcion {
